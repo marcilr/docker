@@ -5,3 +5,16 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 Syntax
 
+
+docker-compose logs web
+docker-compose run web /bin/bash
+docker-compose up
+
+docker-compose up -d
+  -d for daemon mode
+
+Execute on MacBook Pro under ~/projects/psap/:
+  $ docker-compose run web rails new . --force --skip-active-record
+
+  The --skip-active-record alleviates use of database.
+
