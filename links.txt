@@ -21,6 +21,9 @@ https://hub.docker.com/r/circleci/ruby/
 Docker
 https://www.docker.com/
 
+Docker Downloads
+https://www.docker.com/community-edition#/download
+
 WORKDIR
 Dockerfile reference          <===
 https://docs.docker.com/engine/reference/builder/#workdir
