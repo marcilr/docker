@@ -18,3 +18,7 @@ Execute on MacBook Pro under ~/projects/psap/:
 
   The --skip-active-record alleviates use of database.
 
+
+  $ docker-compose exe web /bin/bash
+
+TODO: Create dc shortcut to docker-compose
