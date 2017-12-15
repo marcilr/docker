@@ -11,6 +11,10 @@ Docker related links
 
 Links
 =====
+A Quick Guide to Using Docker-compose (Previously Fig)
+FEB 26TH, 2015 7:43 AM 
+https://larry-price.com/blog/2015/02/26/a-quick-guide-to-using-docker-compose-previously-fig/
+
 Build the project
 docker-compose run web rails new . --force --database=postgresql
 https://docs.docker.com/compose/rails/#define-the-project
