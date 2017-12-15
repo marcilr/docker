@@ -1,0 +1,15 @@
+run.txt
+Created Thu Dec 14 09:54:43 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+From work on Call Coverage Interface for location PSAP routing
+using Comtech API [ID 187] (psap project) with Hanh Bui on
+Wed Dec 13, 2017.
+
+
+Execute on MacBook Pro under ~/projects/psap/:
+  $ docker-compose run web rails new . --force --skip-active-record
+
+Think the --skip-active-record alleviates use of database.
+
