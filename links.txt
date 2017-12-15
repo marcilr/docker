@@ -11,6 +11,10 @@ Docker related links
 
 Links
 =====
+Build the project
+docker-compose run web rails new . --force --database=postgresql
+https://docs.docker.com/compose/rails/#define-the-project
+
 circleci/ruby
 https://hub.docker.com/r/circleci/ruby/
 
