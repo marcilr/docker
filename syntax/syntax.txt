@@ -6,6 +6,18 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 Syntax
 
 
+Directory:
+  /Users/rmarcil/projects/psap/
+
+Test access to Comptech API:
+  $ curl https://b2bprov.iot.tcs911.com/coverage/GCIWIFI
+
+  $ curl http://www.myipaddress.com/show-my-ip-address/
+  Works in browser:
+    myIPaddress.com
+    Your computer's IP address is:*
+    209.165.134.1
+
 docker-compose logs web
 docker-compose run web /bin/bash
 docker-compose up
@@ -18,7 +30,19 @@ Execute on MacBook Pro under ~/projects/psap/:
 
   The --skip-active-record alleviates use of database.
 
+  List running machines:
+  $ docker-compose ps
 
-  $ docker-compose exe web /bin/bash
+  LT-F34328-MAC:psap rmarcil$ docker-compose exe web /bin/bash
+  circleci@1f6b6d290880:/opt/psap$      <=== Is this the temp container
+  circleci@1f6b6d290880:/opt/psap$ exit
+  LT-F34328-MAC:psap rmarcil$
 
 TODO: Create dc shortcut to docker-compose
+
+
+Links
+=====
+iTerm2 is a terminal emulator for macOS that does amazing things.
+Recommended by Hanh Bui.
+https://www.iterm2.com/documentation.html
