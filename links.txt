@@ -25,14 +25,25 @@ https://hub.docker.com/r/circleci/ruby/
 Docker - Build, Ship, and Run Any App, Anywhere
 https://www.docker.com/
 
+Docker Containers
+https://www.docker.com/what-container
+
 Docket Documentation
 https://docs.docker.com/
 
 Docker Downloads
 https://www.docker.com/community-edition#/download
 
+Docker for Linux
+Install Docker on a computer which already
+has a Linux distribution installed.
+https://docs.docker.com/engine/installation/linux/ubuntu/
+
 Docker for Mac
 https://www.docker.com/docker-mac
+
+Getting started with Docker
+https://docs.docker.com/get-started/
 
 WORKDIR
 Dockerfile reference          <===
