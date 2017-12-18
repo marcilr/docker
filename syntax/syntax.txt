@@ -18,25 +18,44 @@ Test access to Comptech API:
     Your computer's IP address is:*
     209.165.134.1
 
+
+Docker use
+==========
+To separate from PSAP project need two items:
+o Dockerfile
+o docker_compose.xml
+  -Need new opt path
+
 docker-compose logs web
 docker-compose run web /bin/bash
-docker-compose up
+
+Composes and brings up infrastructure:
+  $ docker-compose up
 
 docker-compose up -d
   -d for daemon mode
+
+Run makes new host.  Exec attaches to current:
+  $ docker-compose exec web /bin/bash
+
+Runs but gets thrown aways. i.e. discardable
+  $ docker-compose run web /bin/bash
+
+Bring up as daemon:
+  $ docker-compose -d
 
 Execute on MacBook Pro under ~/projects/psap/:
   $ docker-compose run web rails new . --force --skip-active-record
 
   The --skip-active-record alleviates use of database.
 
-  List running machines:
-  $ docker-compose ps
+List running machines:
+$ docker-compose ps
 
-  LT-F34328-MAC:psap rmarcil$ docker-compose exe web /bin/bash
-  circleci@1f6b6d290880:/opt/psap$      <=== Is this the temp container
-  circleci@1f6b6d290880:/opt/psap$ exit
-  LT-F34328-MAC:psap rmarcil$
+LT-F34328-MAC:psap rmarcil$ docker-compose exe web /bin/bash
+circleci@1f6b6d290880:/opt/psap$      <=== Is this the temp container
+circleci@1f6b6d290880:/opt/psap$ exit
+LT-F34328-MAC:psap rmarcil$
 
 TODO: Create dc shortcut to docker-compose
 
