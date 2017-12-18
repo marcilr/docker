@@ -22,7 +22,7 @@ https://docs.docker.com/compose/rails/#define-the-project
 circleci/ruby
 https://hub.docker.com/r/circleci/ruby/
 
-Docker
+Docker - Build, Ship, and Run Any App, Anywhere
 https://www.docker.com/
 
 Docker Downloads
