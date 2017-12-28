@@ -25,17 +25,23 @@ https://hub.docker.com/r/circleci/ruby/
 Docker - Build, Ship, and Run Any App, Anywhere
 https://www.docker.com/
 
+Docker Community Edition (CE)
+https://www.docker.com/community-edition/
+
 Docker Containers
 https://www.docker.com/what-container
 
 Docker - Debian Wiki
 https://wiki.debian.org/Docker
 
-Docket Documentation
+Docker Documentation
 https://docs.docker.com/
 
 Docker Downloads
 https://www.docker.com/community-edition#/download
+
+Docker Enterprise Edition (EE)
+https://www.docker.com/enterprise-edition/
 
 Docker for Linux
 Install Docker on a computer which already
