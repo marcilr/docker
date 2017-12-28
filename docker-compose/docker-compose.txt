@@ -1,0 +1,14 @@
+docker-compose.txt
+Created Thu Dec 28 09:28:59 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+docker-compose - Define and run multi-container applications with
+                 Docker.
+
+docker-compose allows you to define a multi-container application with
+all of its dependencies in a single file, then spin the application up
+in a single command. The application’s structure and configuration are
+held in a single place, which makes spinning up applications simple and
+repeatable everywhere.
+--man 
