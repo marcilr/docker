@@ -1,0 +1,7 @@
+github.txt
+Created Thu Dec 28 10:50:08 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Docker resources on GitHub
+
