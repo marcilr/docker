@@ -9,6 +9,10 @@ docker-compose.txt
   Define and run multi-container applications with Docker
   https://docs.docker.com/compose/
 
+dockercompose.yml
+  Define services for application in
+  docker-compose.yml file.
+
 links.txt
   docker-compose related links
 
