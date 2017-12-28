@@ -1,0 +1,10 @@
+README
+Created Thu Dec 28 09:32:09 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+docker-compose.txt
+  Define and run multi-container applications with Docker
+  https://docs.docker.com/compose/
