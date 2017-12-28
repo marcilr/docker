@@ -1,0 +1,12 @@
+links.txt
+Created Thu Dec 28 10:35:16 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Amazon Web Services (aws) related links
+
+
+Links
+=====
+Amazon Web Services setup guide
+https://docs.docker.com/docker-cloud/cloud-swarm/link-aws-swarm/
