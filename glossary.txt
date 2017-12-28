@@ -45,6 +45,16 @@ docker-compose - docker-compose allows you to define a
     simple and repeatable everywhere.
     --man (docker-compose v1.8.0)
 
+docker-compose.yml - is where the magic happens.  This file
+    describes the services that comprise your app (a database
+    and a web app), how to get each one’s Docker image (the
+    database just runs on a pre-made PostgreSQL image, and the
+    web app is built from the current directory), and the
+    configuration needed to link them together and expose the
+    web app’s port.
+    --Quickstart: Compose and Rails
+      https://docs.docker.com/compose/rails/
+
 Dockerfile - Specifies what is to be included in container
     --Quickstart: Compose and Rails
       https://docs.docker.com/compose/rails/
