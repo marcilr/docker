@@ -1,0 +1,15 @@
+README
+Created Thu Dec 28 10:13:28 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+Dockerfile.txt
+  Dockerfile
+  Define your app’s environment with a Dockerfile so it can
+  be reproduced anywhere.
+
+  --Overview of Docker Compose
+    https://docs.docker.com/compose/overview/
+
