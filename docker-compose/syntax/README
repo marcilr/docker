@@ -7,3 +7,11 @@ Filelist
 ========
 syntax.txt
   Syntax for docker
+
+up.txt
+  docker-compose up
+
+  Compose will start and run your entire app.
+  --Overview of Docker Compose
+    https://docs.docker.com/compose/overview/
+
