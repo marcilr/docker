@@ -1,0 +1,6 @@
+cloud.txt
+Created Thu Dec 28 10:38:10 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Docker cloud
