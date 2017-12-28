@@ -1,0 +1,9 @@
+README
+Created Thu Dec 28 09:45:48 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+dockercompose.yml.txt
+  Define services for application in docker-compose.yml file 
