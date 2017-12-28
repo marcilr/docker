@@ -1,0 +1,15 @@
+up.txt
+Created Thu Dec 28 10:15:41 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+docker-compose up
+
+Compose will start and run your entire app.
+--docs.docker.com/compose/overview
+
+
+Links
+=====
+Overview of Docker Compose
+https://docs.docker.com/compose/overview/
