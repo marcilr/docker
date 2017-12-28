@@ -16,5 +16,9 @@ https://docs.docker.com/compose/
 Features (the list of features)
 https://docs.docker.com/compose/overview/#features
 
+Install Docker Compose
+You can run Compose on macOS, Windows, and 64-bit Linux.
+https://docs.docker.com/compose/install/
+
 Overview of Docker Compose
 https://docs.docker.com/compose/overview/
