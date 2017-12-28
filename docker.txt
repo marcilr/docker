@@ -14,7 +14,38 @@ center VMs, or the cloud.
 --docker.com/
 
 
+Community Edition (CE) vs. Enterprise Edition (EE)
+==================================================
+Docker is available in two editions: Community Edition (CE)
+and Enterprise Edition (EE).
+
+Docker Community Edition (CE) is ideal for developers and
+small teams looking to get started with Docker and experimenting
+with container-based apps.  Docker CE has two update channels,
+stable and edge:
+
+o Stable gives you reliable updates every quarter
+o Edge gives you new features every month
+
+For more information about Docker CE, see Docker Community Edition.[1]
+
+Docker Enterprise Edition (EE) is designed for enterprise development
+and IT teams who build, ship, and run business critical applications
+in production at scale. For more information about Docker EE, including
+purchasing options, see Docker Enterprise Edition.[2]
+--docs.docker.com/engine/installation/
+
+
 Links
 =====
+[1] Docker Community Edition
+https://www.docker.com/community-edition/
+
+[2] Docker Enterprise Edition
+https://www.docker.com/enterprise-edition/
+
 Docker
 https://www.docker.com/
+
+Install Docker
+https://docs.docker.com/engine/installation/
