@@ -6,7 +6,17 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 Glossary
 
 
-docker - Docker is an open platform for developers and sysadmins to build,
-         ship, and run distributed applications, whether on laptops, data
-         center VMs, or the cloud.
+docker - Docker is an open platform for developers and sysadmins
+    to build, ship, and run distributed applications, whether on
+    laptops, data center VMs, or the cloud.
+    --Docker
+      https://www.docker.com/
+
+docker-compose - docker-compose allows you to define a
+    multi-container application with all of its dependencies
+    in a single file, then spin the application up in a single
+    command. The application’s structure and configuration are
+    held in a single place, which makes spinning up applications
+    simple and repeatable everywhere.
+    --man (docker-compose v1.8.0)
 
