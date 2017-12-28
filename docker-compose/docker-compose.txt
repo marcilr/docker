@@ -3,8 +3,9 @@ Created Thu Dec 28 09:28:59 AKST 2017
 Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 
-docker-compose - Define and run multi-container applications with
-                 Docker.
+docker-compose
+
+Define and run multi-container applications with Docker.
 
 docker-compose allows you to define a multi-container application with
 all of its dependencies in a single file, then spin the application up
@@ -12,3 +13,31 @@ in a single command. The application’s structure and configuration are
 held in a single place, which makes spinning up applications simple and
 repeatable everywhere.
 --man 
+
+
+Compose is a tool for defining and running multi-container Docker
+applications.  With Compose, you use a YAML file to configure your
+application’s services. Then, with a single command, you create and
+start all the services from your configuration. To learn more about
+all the features of Compose, see the list of features.[1]
+
+Compose works in all environments: production, staging, development,
+testing, as well as CI workflows.  You can learn more about each case
+in Common Use Cases.
+
+Using Compose is basically a three-step process:
+1. Define your app’s environment with a Dockerfile so it can be
+   reproduced anywhere.
+
+2. Define the services that make up your app in docker-compose.yml
+   so they can be run together in an isolated environment.
+
+3. Lastly, run docker-compose up and Compose will start and run your
+   entire app.
+--docs.docker.com/compose/overview/
+
+
+Links
+=====
+Overview of Docker Compose
+https://docs.docker.com/compose/overview/
