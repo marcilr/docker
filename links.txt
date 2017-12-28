@@ -57,10 +57,6 @@ https://www.docker.com/docker-mac
 Getting started with Docker
 https://docs.docker.com/get-started/
 
-WORKDIR
-Dockerfile reference          <===
-https://docs.docker.com/engine/reference/builder/#workdir
-
 How to cache bundle install with Docker <===
 Also the start command for the app container lives at
 /script/start, it is a very simple bash script that first
@@ -71,3 +67,7 @@ bundle install; also brings up the Rails app:
 bundle check || bundle install
 bundle exec rails s -b 0.0.0.0
 https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800
+
+WORKDIR
+Dockerfile reference          <===
+https://docs.docker.com/engine/reference/builder/#workdir
