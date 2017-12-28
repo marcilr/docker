@@ -8,6 +8,10 @@ Filelist
 00INSTALL/
   Installation of docker on Debian stretch 9.3 amd64
 
+aws/
+  Amazon Web Services
+  https://docs.docker.com/docker-cloud/cloud-swarm/link-aws-swarm/
+
 docker.txt
   Docker
   https://www.docker.com/
