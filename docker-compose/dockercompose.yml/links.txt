@@ -1,0 +1,12 @@
+links.txt
+Created Thu Dec 28 09:54:27 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+dockercompose.yml related links
+
+
+Links
+=====
+Compose file version 3 reference
+https://docs.docker.com/compose/compose-file/
