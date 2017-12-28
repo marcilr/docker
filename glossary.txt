@@ -45,4 +45,6 @@ docker-compose - docker-compose allows you to define a
     simple and repeatable everywhere.
     --man (docker-compose v1.8.0)
 
-
+Dockerfile - Specifies what is to be included in container
+    --Quickstart: Compose and Rails
+      https://docs.docker.com/compose/rails/
