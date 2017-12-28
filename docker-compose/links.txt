@@ -12,3 +12,9 @@ Docker Compose
 Compose is a tool for defining and running
 multi-container Docker applications.
 https://docs.docker.com/compose/
+
+Features (the list of features)
+https://docs.docker.com/compose/overview/#features
+
+Overview of Docker Compose
+https://docs.docker.com/compose/overview/
