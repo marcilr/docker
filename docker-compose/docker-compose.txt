@@ -39,5 +39,9 @@ Using Compose is basically a three-step process:
 
 Links
 =====
+[1] the list of features
+Features
+https://docs.docker.com/compose/overview/#features
+
 Overview of Docker Compose
 https://docs.docker.com/compose/overview/
