@@ -12,6 +12,10 @@ aws/
   Amazon Web Services
   https://docs.docker.com/docker-cloud/cloud-swarm/link-aws-swarm/
 
+cloud/
+  Use the Docker Cloud Agent to Bring your Own Host
+  https://docs.docker.com/docker-cloud/infrastructure/byoh/
+
 docker.txt
   Docker
   https://www.docker.com/
