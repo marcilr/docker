@@ -14,6 +14,24 @@ docker - Docker is an open platform for developers and sysadmins
     --Docker
       https://www.docker.com/
 
+Docker Community Edition (CE) - Docker Community Edition (CE) is
+    ideal for developers and small teams looking to get started
+    with Docker and experimenting with container-based apps.
+    Docker CE has two update channels, stable and edge:
+    o Stable gives you reliable updates every quarter
+    o Edge gives you new features every month
+    https://www.docker.com/community-edition/
+    --Install Docker
+      https://docs.docker.com/engine/installation/
+
+Docker Enterprise Edition (EE) - Docker Enterprise Edition (EE)
+    is designed for enterprise development and IT teams who build,
+    ship, and run business critical applications in production at
+    scale. 
+    https://www.docker.com/enterprise-edition/
+    --Install Docker
+      https://docs.docker.com/engine/installation/
+
 Dockerfile - Define your app’s environment with a Dockerfile so
     it can be reproduced anywhere.
     --Overview of Docker Compose
