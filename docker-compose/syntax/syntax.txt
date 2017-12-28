@@ -1,0 +1,6 @@
+syntax.txt
+Created Thu Dec 28 09:31:10 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Syntax for docker
