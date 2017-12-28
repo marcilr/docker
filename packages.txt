@@ -1,0 +1,14 @@
+packages.txt
+Created Thu Dec 28 09:15:10 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Docker packages for Debian stretch 9.3 amd64
+
+
+Packages
+========
+docker - System tray for KDE3/GNOME2 docklet applications
+docker-compose - Punctual, lightweight development environments using Docker
+ruby-docker-api - Ruby gem to interact with docker.io remote API
+
