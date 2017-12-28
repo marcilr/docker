@@ -12,6 +12,9 @@ docker.txt
 links.txt
   Docker related links
 
+packages.txt
+  Docker packages for Debian
+
 syntax/
   Syntax
 
