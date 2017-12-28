@@ -1,0 +1,12 @@
+glossary.txt
+Created Thu Dec 28 10:01:42 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Glossary
+
+
+docker - Docker is an open platform for developers and sysadmins to build,
+         ship, and run distributed applications, whether on laptops, data
+         center VMs, or the cloud.
+
