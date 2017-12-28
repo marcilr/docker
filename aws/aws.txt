@@ -1,0 +1,6 @@
+aws.txt
+Created Thu Dec 28 10:34:17 AKST 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Amazon Web Services
