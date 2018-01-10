@@ -10,5 +10,9 @@ Packages
 ========
 docker - System tray for KDE3/GNOME2 docklet applications
 docker-compose - Punctual, lightweight development environments using Docker
+python-docker - Python wrapper to access docker.io's control socket
+python-dockerpty - Pseudo-tty handler for docker Python client (Python 2.x)
+
 ruby-docker-api - Ruby gem to interact with docker.io remote API
+  Not installed on covellite
 
