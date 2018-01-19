@@ -14,6 +14,15 @@ center VMs, or the cloud.
 --docker.com/
 
 
+Fri Jan 19 10:54:50 AKST 2018
+=============================
+Yesterday the GCI NIT MacBook Pro (15-inch, 2016)
+updated to:
+  Docker 17.12.0-ce
+  Docker compose 1.18.0
+  Docker Machine 0.13.0
+  Linux Kernel 4.9.60
+
 Community Edition (CE) vs. Enterprise Edition (EE)
 ==================================================
 Docker is available in two editions: Community Edition (CE)
