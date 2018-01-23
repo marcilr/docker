@@ -5,6 +5,9 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+iTerm2.txt
+  iTerm2 is the nice terminal window.
+
 run.txt
   Execute on MacBook Pro under ~/projects/psap/:
   $ docker-compose run web rails new . --force --skip-active-record
