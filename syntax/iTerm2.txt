@@ -1,0 +1,7 @@
+iTerm2.txt
+Created Tue Jan 23 10:11:29 AKST 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+iTerm2 is the nice terminal window.
+
