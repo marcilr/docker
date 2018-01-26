@@ -5,6 +5,14 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 docker-compose
 
+Use to set up resources.  Simple and easy to use.
+Just run 'docker-compose' to display list of commands.
+
+
+Ruby on Rails
+rubyonrails.org/
+
+
 Define and run multi-container applications with Docker.
 
 docker-compose allows you to define a multi-container application with
@@ -37,6 +45,92 @@ Using Compose is basically a three-step process:
 --docs.docker.com/compose/overview/
 
 
+Commands (mentioned by Hanh)
+========
+docker-compose up   - Create and start containers
+                      Runs in forground.
+                      Logs to stdout
+                      Use ctrl-c to shutdown
+
+docker-compose down - Stop and remove containers, networks,
+                      images, and volumes
+
+
+docker-compose build web   - Thinking I may no longer need to do this
+                             since Hanh's last modifications circa 
+                             Wed Jan 23, 2017.
+
+docker-compose run web /bin/bash
+  Thinking I may no longer have to use this comand. 
+
+docker-compose run web rails new . --force --skip-active-record
+  Thinking I may no longer have to use this comand.
+
+On Wed Jan 23, 2017 (from chekcing up arrow on Fri Jan 26, 2018):
+  xcode-select --install
+  fine . -name container_linux.go
+  locate container_linux.go
+  sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+
+Wed Jan 23 11:59:31 AKST 2018
+=============================
+Think Hanh had metioned:
+
+Ruby on Rails
+rubyonrails.org/
+
+Run command:
+  "Rails Generator"
+  "Rails 5" generator   <=== Latest stable
+
+Attach to web server:
+  docker-compose run web /bin/bash
+
+echo test >> development.log   <=== Don't remember doing this
+
+rails console   <=== debugger
+
+> Date .parse('2018-03-15')  <=== Test in realtime
+
+iterm  <=== shell terminal
+  Shell > Split Vertically with Current Profile  <=== Split terminal vertically
+  cmd-option right/left arrow key to select vertical window
+
+docker-compose build web
+docker-compose up
+
+Delete vendor/bundle from the PSAP project.   <===
+  The project should fetch all gems.
+  Should branch and do this.
+
+To start and access ruby on rails (tested Fri Jan 26, 2018):
+  docker-compose build web
+  docker-compose up
+  localhost:3000   <=== Hit ruby on rails on MacBook Pro
+
+Development strategy:
+  1. Focus on creating a new ruby class for TCS client code
+  2. Test class with 'rails console' the web.
+
+Must Jira Ticket
+  TCS Ticket
+  "TCS Client" ticket
+  The create subtickets for subtasks
+
+o Hanh with sent workflow fro prepaid task.  <=== Should adapt.
+o Kanban will build automatically from subtasks.
+o Do test driven development
+o See Ruby on Rails
+o Build unit tests.  i.e. can create tests before development
+
+ctrl-c to break out of docker
+docker-compose down
+docker system prune   <=== Get rid of orphan files and such
+
+localhost:3000   <=== Rails !!!
+
+ 
 Links
 =====
 [1] the list of features
