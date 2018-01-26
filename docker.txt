@@ -14,6 +14,23 @@ center VMs, or the cloud.
 --docker.com/
 
 
+Fri Jan 26 08:34:18 AKST 2018
+=============================
+Processing yellow notepad notes at GCI DT office.
+
+Found reference to:
+
+Circle CI - Think continuous integration tool to automate pipeline
+  https://circleci.com/product/
+
+Travis CI - Another continuous integration tool
+  Test and Deploy with Confidence
+  Easily sync your GitHub projects with Travis CI
+  and you’ll be testing your code in minutes!
+  https://travis-ci.org/
+
+
+
 Fri Jan 19 10:54:50 AKST 2018
 =============================
 Yesterday the GCI NIT MacBook Pro (15-inch, 2016)
