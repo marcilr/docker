@@ -14,6 +14,10 @@ center VMs, or the cloud.
 --docker.com/
 
 
+Using docker for use with Comtech API at GCI NIT
+(Network Integration Team) circa Spring 2018.
+
+
 Fri Jan 26 08:34:18 AKST 2018
 =============================
 Processing yellow notepad notes at GCI DT office.
