@@ -66,3 +66,10 @@ docker-compose.yml - is where the magic happens.  This file
 Dockerfile - Specifies what is to be included in container
     --Quickstart: Compose and Rails
       https://docs.docker.com/compose/rails/
+
+image - An image is an executable package that includes everything
+  needed to run an application–the code, a runtime, libraries,
+  environment variables, and configuration files.
+  --Get Started, Part 1: Orientation and setup
+    https://docs.docker.com/get-started/#docker-concepts
+
