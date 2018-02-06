@@ -26,6 +26,13 @@ o Dockerfile
 o docker_compose.xml
   -Need new opt path
 
+List running containers with the command:
+  docker ps
+  --Get Started, Part 1: Orientation and setup
+    https://docs.docker.com/get-started/#images-and-containers
+
+
+
 docker-compose logs web
 docker-compose run web /bin/bash
 
