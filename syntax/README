@@ -15,3 +15,6 @@ run.txt
 syntax.txt
   Syntax
 
+version.txt
+  Version of Docker
+
