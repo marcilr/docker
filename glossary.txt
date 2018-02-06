@@ -8,6 +8,14 @@ Glossary
 
 CI workflows - 
 
+container - A container is a runtime instance of an image–what
+  the image becomes in memory when executed (that is, an image
+  with state, or a user process).  You can see a list of your
+  running containers with the command, docker ps, just as yo
+  would in Linux.
+  --Get Started, Part 1: Orientation and setup
+    https://docs.docker.com/get-started/
+
 docker - Docker is an open platform for developers and sysadmins
     to build, ship, and run distributed applications, whether on
     laptops, data center VMs, or the cloud.
