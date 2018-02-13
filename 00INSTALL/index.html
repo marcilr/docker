@@ -1,13 +1,201 @@
 <html>
 <head>
 <style type="text/css" media="all" >@import url(css/main.css);</style>  
-<title>Docker Installation</title>
+<title>Installation of Docker</title>
 </head>
 
 
 <body>
-<h1>Docker Installation</h1>
+<h1>Installation of Docker</h1>
 
+<table cellpadding="25">
+<tr valign="top">
+<td valign="top" width="33%">
+    
+<h2>covellite - Feb 7, 2018</h2>
+  
+<h2>Prerequisites</h2>
+<h3>OS requirements</h3>
+To install Docker CE, you need the 64-bit version
+of one of these Debian or Raspbian versions:
+<ul>
+  <li>Buster 10 (Docker CE 17.11 Edge only)
+  <li><b>Stretch 9 (stable) / Raspbian Stretch</b>
+  <li>Jessie 8 (LTS) / Raspbian Jessie
+  <li>Wheezy 7.7 (LTS)
+</ul>
+
+Docker CE is supported on both
+<code class="language-css"><b>x86_64</b></code> (or
+<code class="language-css">amd64</code>) and
+<code class="language-css">armhf</code> architectures
+for Jessie and <b>Stretch</b>.
+
+<p>
+Have Stretch 9 installed on covellite workstation.
+
+<h2>Uninstall old versions</h2>
+Older versions of Docker were called
+<code class="language-css">docker</code>
+or
+<code class="language-css">docker-engine</code>.
+
+If these are installed, uninstall them:
+<pre rel="CSS"><code class="language-css"># aptitude remove docker docker-engine docker.io</code></pre>
+
+NOTE: covellite only had
+<code class="language-css">docker</code> installed hence only used:
+<pre rel="CSS"><code class="language-css"># aptitude remove docker</code></pre>
+  
+<h2>Get Docker CE for Debian</h2>
+
+<ol>
+  <li> Updated package index:<br>
+<pre rel="CSS"><code class="language-css"># aptitude update
+# aptitude upgrade
+</code></pre>
+
+<li>Install packages to allow apt to use a repository over HTTPS:
+
+<pre rel="CSS"><code class="language-css"># aptitude install
+apt-transport-https \
+ca-certificates \
+curl \
+gnupg2 \
+software-properties-common
+#
+</code></pre>
+
+    <li>Add Docker's official GPG key:
+<pre rel="CSS"><code class="language-css"># curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | \
+sudo apt-key add -
+OK
+#
+</code></pre>
+
+Verify that you now have the key with the fingerprint
+<code class="language-css"> 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88</code>, by searching for the last 8 characters of the fingerprint.<br>
+
+<pre rel="CSS"><code class="language-css"># apt-key fingerprint 0EBFCD88
+pub&nbsp;&nbsp;&nbsp;rsa4096 2017-02-22 [SCEA]
+9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ unknown] Docker Release (CE deb) <docker@docker.com>
+sub&nbsp;&nbsp;&nbsp;rsa4096 2017-02-22 [S]
+</code></pre>
+
+Have fingerprint - looks good.<br><br>
+
+<li>Use the following command to set up the stable repository.
+    You always need the stable repository, even if you want to
+    install builds from the edge or test repositories as well.
+    To add the edge or test repository, add the word edge or test
+    (or both) after the word stable in the commands below.
+    <p>
+    Note: The <code class="language-css">lsb_release -cs</code>
+    sub-command below returns the name of your Debian distribution,
+    such as <code class="language-css">jessie</code>.
+    <p>
+    To also add the edge repository, add
+    <code class="language-css">edge</code> after
+    <code class="language-css">stable</code> on
+    the last line of the command.
+        
+<pre rel="CSS"><code class="language-css"># add-apt-repository \
+"deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
+$(lsb_release -cs) \
+stable"
+#
+</code></pre>
+
+This updated <code class="language-css">/etc/apt/sources.list</code>
+with:
+<pre rel="CSS"><code class="language-css">deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
+# deb-src [arch=amd64] https://download.docker.com/linux/debian stretch stable
+</code></pre>    
+</ol>
+
+  
+<h2>Install Docker CE</h2>
+Note: This procedure works for Debian on
+<code class="language-css"> x86_64 / amd64</code>,
+Debian ARM, or Raspbian.
+
+<ol>
+  <li>Update the package index:
+    <pre rel="CSS"><code class="language-css"># aptitude update</code></pre>
+
+    This yields an error:
+    <pre rel="CSS"><code class="language-css"># aptitude update
+Hit http://download.virtualbox.org/virtualbox/debian stretch InRelease
+Ign http://dl.google.com/linux/chrome/deb stable InRelease
+Ign http://ftp.us.debian.org/debian stable InRelease
+Get: 1 http://dl.google.com/linux/chrome/deb stable Release [1,189 B]
+Hit http://ftp.us.debian.org/debian stable Release 
+Get: 2 http://dl.google.com/linux/chrome/deb stable Release.gpg [819 B]
+Ign https://download.docker.com/linux/debian stretch InRelease 
+Err https://download.docker.com/linux/debian stretch Release
+  gnutls_handshake() failed: Public key signature verification has failed.
+Get: 3 http://dl.google.com/linux/chrome/deb stable/main amd64 Packages [1,373 B]
+Fetched 3,381 B in 0s (5,973 B/s)     
+E: The repository 'https://download.docker.com/linux/debian stretch Release' \
+does not have a Release file.
+E: Failed to download some files
+W: Failed to fetch https://download.docker.com/linux/debian/dists/stretch/Release: \
+gnutls_handshake() failed: Public key signature verification has failed.
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+
+#</code></pre>
+
+<b>Comments:</b><br>
+Using chrome or wget can download:<pre rel="CSS"><code class="language-css">&nbsp;&nbsp;&nbsp;&nbsp;https://download.docker.com/linux/debian/dists/stretch/Release</code></pre>
+
+  <li>Unable to resolve the <code class="language-css">aptitude update gnutls_handshake() error.</code> Opted to use debs instead.<br>
+<br>
+From:
+<pre><code class="language-css">&nbsp;&nbsp;&nbsp;&nbsp;https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/</code></pre>
+
+Downloaded:
+<pre><code class="language-css">&nbsp;&nbsp;&nbsp;&nbsp<a href="https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/docker-ce_17.12.0~ce-0~debian_amd64.deb">https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/docker-ce_17.12.0~ce-0~debian_amd64.deb</a></code></pre>
+
+<li>Install <code class="language-css">docker-ce_17.12.0~ce-0~debian_amd64.deb</code>
+<pre><code class="language-css"># dpkg -i docker-ce_17.12.0~ce-0~debian_amd64.deb
+Selecting previously unselected package docker-ce.
+(Reading database ... 355196 files and directories currently installed.)
+Preparing to unpack docker-ce_17.12.0~ce-0~debian_amd64.deb ...
+Unpacking docker-ce (17.12.0~ce-0~debian) ...
+Setting up docker-ce (17.12.0~ce-0~debian) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Processing triggers for systemd (232-25+deb9u1) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+#
+</code></pre>
+
+<li> Workstation installation now has:
+<pre><code class="language-css">$ dpkg -l | grep docker
+ii  docker-ce          17.12.0~ce-0~debian   amd64   Docker: the open-source application container engine
+ii  docker-compose     1.8.0-2               all     Punctual, lightweight development environments using Docker
+ii  python-docker      1.9.0-1               all     Python wrapper to access docker.io's control socket
+ii  python-dockerpty   0.4.1-1               all     Pseudo-tty handler for docker Python client (Python 2.x)
+$
+</code></pre>
+<p>
+NOTE: The docker-cd package did install docker:<pre><code class="language-css">$ type docker
+docker is /usr/bin/docker
+$
+</code></pre>
+
+Version:
+<pre><code class="language-css">$ docker --version
+Docker version 17.12.0-ce, build c97c6d6
+</code></pre>
+      
+</ol>
+
+</td>
+</tr>
+
+</table>
 
 <!-- ========================== Outer Table ========================= -->
 <!-- ========================== Outer Table ========================= -->
@@ -19,25 +207,27 @@
 
   
 <!-- =========================== Links ========================== -->
-<!-- =========================== Links ========================== -->
+<!-- =========================== links ========================== -->
 <!-- =========================== Links ========================== -->
 <h2>Links</h2>
+
+<p>
 <table>
 
-  <!-- ================= Docker Community Edition =============== -->
-  <!-- ================= Docker Community Edition =============== -->
+  <!-- ========= Get Started, Part 1: Orientation and setup ======== -->
+  <!-- ========= Get Started, Part 1: Orientation and setup ======== -->
   <tr>
   <td valign="top">
-    <a href="https://docs.docker.com/engine/installation/">
+    <a href="https://docs.docker.com/get-started/">
     <img src="../../../pics/icons/ico_doc.gif">
     </a>
   </td>
   <td>
-    <a href="https://docs.docker.com/engine/installation/">
-      Install Docker</a>
+    <a href="https://docs.docker.com/get-started/">
+    Get Started, Part 1: Orientation and setup</a>
   </td>
   </tr>
-  
+
   <!-- ================= Docker Community Edition =============== -->
   <!-- ================= Docker Community Edition =============== -->
   <tr>
@@ -79,26 +269,62 @@
     Get Started, Part 1: Orientation and setup</a>
   </td>
   </tr>
+
+  <!-- ============ Docker Community Edition for Debian ============= -->
+  <tr>
+  <td valign="top">
+    <a href="https://docs.docker.com/install/linux/docker-ce/debian/">
+    <img src="../../../pics/icons/ico_doc.gif">
+    </a>
+  </td>
+  <td>
+    <a href="https://docs.docker.com/install/linux/docker-ce/debian/">
+    Get Docker CE for Debian</a><br>
+  </td>
+  </tr>
+
+  <!-- ============ Install Docker ============= -->
+  <tr>
+  <td valign="top">
+    <a href="https://docs.docker.com/install/">
+    <img src="../../../pics/icons/ico_doc.gif">
+    </a>
+  </td>
+  <td>
+    <a href="https://docs.docker.com/install/">
+    Install Docker </a><br>
+  </td>
+  </tr>
+
+  <!-- ================= Docker Community Edition =============== -->
+  <!-- ================= Docker Community Edition =============== -->
+  <tr>
+  <td valign="top">
+    <a href="https://docs.docker.com/engine/installation/">
+    <img src="../../../pics/icons/ico_doc.gif">
+    </a>
+  </td>
+  <td>
+    <a href="https://docs.docker.com/engine/installation/">
+      Install Docker Engine</a>
+  </td>
+  </tr>
+
+  <!-- ============ Install Docker Compose ============= -->
+  <tr>
+  <td valign="top">
+    <a href="https://docs.docker.com/compose/install/">
+    <img src="../../../pics/icons/ico_doc.gif">
+    </a>
+  </td>
+  <td>
+    <a href="https://docs.docker.com/compose/install/">
+    Install Docker Compose</a><br>
+  </td>
+  </tr>
+
   
 </table>
-
-
-<!-- ========================== Outer Table ========================= -->
-<!-- ========================== Outer Table ========================= -->
-<!-- ========================== Outer Table ========================= -->
-<!-- ========================== Outer Table ========================= -->
-</td>
-
-
-
-
-<!-- ========================== Outer Table ========================= -->
-<!-- ========================== Outer Table ========================= -->
-<!-- ========================== Outer Table ========================= -->
-<!-- ========================== Outer Table ========================= -->
-</td>
-<td valign="top" width="33%">
-
 
 
 <!-- ========================== Outer Table ========================= -->
