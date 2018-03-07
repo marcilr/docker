@@ -18,5 +18,6 @@ Docker project plan
    ii. Integration of ruby code?
    iii. Main body of program
    iv. Access to online service?
+       Should have access from laptop.
    v. Library to do xml query.
 8. Test
