@@ -17,5 +17,6 @@ Docker project plan
    i. Page to report results
    ii. Integration of ruby code?
    iii. Main body of program
-   iv. Library to do xml query.
+   iv. Access to online service?
+   v. Library to do xml query.
 8. Test
