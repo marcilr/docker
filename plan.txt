@@ -15,6 +15,7 @@ Docker project plan
 6. Plan project
 7. Implement project
    i. Page to report results
-   ii. Main body of program
-   iii. Library to do xml query.
+   ii. Integration of ruby code?
+   iii. Main body of program
+   iv. Library to do xml query.
 8. Test
