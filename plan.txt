@@ -9,9 +9,12 @@ Docker project plan
 1. Create hello world application in docker.
 2. Needs assessment and requirements
 3. Is there an existing project that does what I want?
-4. Plan project
-5. Implement project
+4. Creation of hello world application to test application
+   implementation in docker.
+5. Access to xml page to query
+6. Plan project
+7. Implement project
    i. Page to report results
    ii. Main body of program
    iii. Library to do xml query.
-6. Test
+8. Test
