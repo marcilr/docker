@@ -1,0 +1,10 @@
+plan.txt
+Created Wed Mar  7 13:00:13 AKST 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Docker project plan
+
+1. Create hello world application in docker.
+2. Is there an existing project that does what I want?
+
