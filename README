@@ -33,6 +33,9 @@ links.txt
 packages.txt
   Docker packages for Debian
 
+projects/
+  Projects for docker
+
 syntax/
   Syntax
 
