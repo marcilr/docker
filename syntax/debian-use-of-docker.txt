@@ -3,7 +3,8 @@ Created Wed Mar 14 09:42:10 AKDT 2018
 Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 
-Debian stretch amd64 use of docker
+Debian use of docker on stretch amd64
+
 
 1. Installed docker packages:
 $ dpkg -l | grep docker
@@ -20,7 +21,15 @@ ii  python-dockerpty    0.4.1-1               all     \
     Pseudo-tty handler for docker Python client (Python 2.x)
 $ 
 
-3. Configure dockerd default options in /etc/docker/daemon.json
+
+3. Verify dockerd - Enable daemon mode is installed:
+
+$ type dockerd
+dockerd is /usr/bin/dockerd
+$
+
+
+4. Configure dockerd default options in /etc/docker/daemon.json
 such that they do not have to be configured on the command line:
 
 /etc/docker/daemon.json
@@ -33,14 +42,7 @@ such that they do not have to be configured on the command line:
 }
 
 
-2. Verify dockerd - Enable daemon mode is installed:
-
-$ type dockerd
-dockerd is /usr/bin/dockerd
-$
-
-
-3. Test execution of dockerd:
+5. Test execution of dockerd:
 
 
 
