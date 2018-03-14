@@ -5,6 +5,9 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+debian-use-of-docker.txt
+  Debian use of docker
+
 run.txt
   Execute on MacBook Pro under ~/projects/psap/:
   $ docker-compose run web rails new . --force --skip-active-record
