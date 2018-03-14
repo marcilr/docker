@@ -43,8 +43,19 @@ such that they do not have to be configured on the command line:
 
 
 5. Test execution of dockerd:
+$ dockerd
 
 
+Various items to get dockerd working from marcilr account:
+
+o Created configuration file:
+  /etc/docker/daemon.json
+
+o Set privs on /etc/docker/ directory:
+  # chmod 755 /etc/docker/
+
+o Set privs on /var/lib/docker/
+  # chmod 777 /var/lib/docker
 
 
 Links
