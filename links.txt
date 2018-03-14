@@ -80,6 +80,10 @@ https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7b
 Install Docker
 https://docs.docker.com/install/
 
+Securing Docker with TLS certificates
+January 3, 2016
+http://tech.paulcz.net/2016/01/secure-docker-with-tls/
+
 WORKDIR
 Dockerfile reference          <===
 https://docs.docker.com/engine/reference/builder/#workdir
