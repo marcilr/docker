@@ -8,6 +8,15 @@ Docker installation related links
 
 Links
 =====
+Configure and troubleshoot the Docker daemon
+https://docs.docker.com/config/daemon/
+
+Configure Docker to start on boot
+https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot
+
+Install Docker
+https://docs.docker.com/install/
+
 Install Docker Compose
 You can run Compose on macOS, Windows, and 64-bit Linux.
 https://docs.docker.com/compose/install/
