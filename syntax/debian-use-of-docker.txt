@@ -1,0 +1,51 @@
+debian-use-of-docker.txt
+Created Wed Mar 14 09:42:10 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Debian stretch amd64 use of docker
+
+1. Installed docker packages:
+$ dpkg -l | grep docker
+ii  docker-ce           17.12.0~ce-0~debian   amd64   \
+    Docker: the open-source application container engine
+
+ii  docker-compose      1.8.0-2               all     \
+    Punctual, lightweight development environments using Docker
+
+ii  python-docker       1.9.0-1               all     \
+    Python wrapper to access docker.io's control socket
+
+ii  python-dockerpty    0.4.1-1               all     \
+    Pseudo-tty handler for docker Python client (Python 2.x)
+$ 
+
+3. Configure dockerd default options in /etc/docker/daemon.json
+such that they do not have to be configured on the command line:
+
+/etc/docker/daemon.json
+{
+  "debug": true,
+  "tls": true,
+  "tlscert": "/var/docker/server.pem",
+  "tlskey": "/var/docker/serverkey.pem",
+  "hosts": ["tcp://127.0.0.1:2376"]
+}
+
+
+2. Verify dockerd - Enable daemon mode is installed:
+
+$ type dockerd
+dockerd is /usr/bin/dockerd
+$
+
+
+3. Test execution of dockerd:
+
+
+
+
+Links
+=====
+Configure and troubleshoot the Docker daemon
+https://docs.docker.com/config/daemon/
