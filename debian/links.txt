@@ -8,5 +8,19 @@ Debian installation of docker related links
 
 Links
 =====
+Docker Community Edition for Debian
+By Docker
+The best way to run Docker on Debian
+https://store.docker.com/editions/community/docker-ce-server-debian
+
 Docker for Debian
 https://www.docker.com/docker-debian
+
+Download from Docker Store
+https://www.docker.com/docker-debian
+===> https://store.docker.com/editions/community/docker-ce-server-debian
+
+Setup Instructions
+Docker Community Edition for Debian
+By Docker
+https://store.docker.com/editions/community/docker-ce-server-debian/plans/docker-ce-server-debian-tier?tab=instructions
