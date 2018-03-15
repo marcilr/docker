@@ -90,11 +90,14 @@ v. Use the following command to set up the stable repository.
   deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
   $
 
+vi. 
+
 
 Links
 =====
 [1] Get Docker CE for Debian
 Installation instructions
+NOTE: This page has the bulk of the instructions used here
 https://docs.docker.com/install/linux/docker-ce/debian/
 
 [2] Set up the repository
