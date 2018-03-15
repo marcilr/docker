@@ -4,3 +4,30 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 
 Debian installation of docker
+
+
+Docker for Debian is the best way to install the Docker
+platform on Debian Linux environments.  Simplify provisioning
+and setup of Docker and accelerate your time to value in
+building and deploying container based applications.  Docker
+for Debian is available for free Community Edition (CE) and
+can be installed on bare metal or cloud infrastructure.[1]
+
+Features and Benefits
+=====================
+o Easy installation and setup of an optimized Docker
+  environment for Debian on bare metal servers and VMs
+
+o Latest Docker platform version with built in orchestration
+  (clustering and scheduling), runtime security, container
+  networking and volumes
+
+o  Also available for ARM 32 based platforms
+
+o Available as a free download with a monthly Edge or
+  quarterly Stable release with community support[1]
+
+Links
+=====
+[1] Docker for Debian
+    https://www.docker.com/docker-debian
