@@ -1,0 +1,50 @@
+debs.txt
+Created Thu Mar 15 14:10:25 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Debian Docker CE debs 
+
+
+To download the Docker CE debs:
+==============================
+Go to https://download.docker.com/linux/debian/dists/,
+choose your Debian version, browse to pool/stable/,
+choose either amd64 or armhf, and download the .deb file
+for the Docker CE version you want to install.[1]
+
+Index of /linux/debian/dists/stretch/pool/stable/amd64/
+../
+docker-ce_17.03.0~ce-0~debian-stretch_amd64.deb   2017-03-01 11:10  21M
+docker-ce_17.03.1~ce-0~debian-stretch_amd64.deb   2017-03-28 04:46  21M
+docker-ce_17.03.2~ce-0~debian-stretch_amd64.deb   2017-06-28 03:35  21M
+docker-ce_17.06.0~ce-0~debian_amd64.deb           2017-06-28 05:17  20M
+docker-ce_17.06.1~ce-0~debian_amd64.deb           2017-08-18 02:35  20M
+docker-ce_17.06.2~ce-0~debian_amd64.deb           2017-09-05 10:39  20M
+docker-ce_17.09.0~ce-0~debian_amd64.deb           2017-09-27 01:47  21M
+docker-ce_17.09.1~ce-0~debian_amd64.deb           2017-12-08 12:22  21M
+docker-ce_17.12.0~ce-0~debian_amd64.deb           2017-12-27 09:52  29M
+docker-ce_17.12.1~ce-0~debian_amd64.deb           2018-02-28 01:51  29M
+
+--https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/
+
+
+Filelist
+========
+docker-ce_17.12.1~ce-0~debian_amd64.deb (29MB)
+  Docker CD
+  Stable release 17.12.1-ce (2018-02-27)
+  Index of /linux/debian/dists/stretch/pool/stable/amd64/
+  https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/
+  https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/docker-ce_17.12.1~ce-0~debian_amd64.deb
+
+Links
+=====
+[1] Install from a package
+    Get Docker CE for Debian
+    https://docs.docker.com/install/linux/docker-ce/debian/
+
+Stable releases
+17.12.1-ce (2018-02-27)
+Docker CE release notes
+https://docs.docker.com/release-notes/docker-ce/
