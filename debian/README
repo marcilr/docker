@@ -5,6 +5,12 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
-debian.txt
-  Debian installation of docker
+00INSTALL/
+  Installation of Docker for Debian
 
+debian.txt
+  Docker for Debian
+
+links.txt
+  Debian installation of docker related links
+  
