@@ -21,23 +21,67 @@ $ uname -r
 $
 
 3. Uninstall old versions:[1]
-# aptitude remove docker docker-engine docker.io
+sudo aptitude remove docker docker-engine docker.io
 
 None of these packages were installed.
 
 4. Add Docker CD repository:[2]
 i. Update debian:
-   # aptitude update
-   # aptitude upgrade
+   $ sudo aptitude update
+   $ sudo aptitude upgrade
 
 ii. Added packages:
-   # aptitude install apt-transport-https
-   # aptitude install ca-certificates
-   # aptitude install curl
-   # aptitude install gnupg2
-   # aptitude install software-properties-common
+   $ sudo aptitude install apt-transport-https
+   $ sudo aptitude install ca-certificates
+   $ sudo aptitude install curl
+   $ sudo aptitude install gnupg2
+   $sudo aptitude install software-properties-common
 
-All packages installed already
+   All packages installed already
+
+iii. Add Docker’s official GPG key:
+  $ curl -fsSL https://download.docker.com/linux/debian/gpg | \
+  sudo apt-key add -
+  OK
+  $
+
+iv. Verify that you now have the key with the fingerprint
+  9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88,
+  by searching for the last 8 characters of the fingerprint:
+
+  $ sudo apt-key fingerprint 0EBFCD88
+  pub   rsa4096 2017-02-22 [SCEA]
+        9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+  uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+  sub   rsa4096 2017-02-22 [S]
+
+  $
+
+  Looks good
+
+v. Use the following command to set up the stable repository.
+  You always need the stable repository, even if you want to
+  install builds from the edge or test repositories as well.
+  To add the edge or test repository, add the word edge or
+  test (or both) after the word stable in the commands below.
+
+  Note: The lsb_release -cs sub-command below returns the
+        name of your Debian distribution, such as jessie.
+
+  To also add the edge repository, add edge after stable on
+  the last line of the command.
+
+  $ sudo add-apt-repository \
+  > "deb [arch=amd64] https://download.docker.com/linux/debian \
+  > $(lsb_release -cs) \
+  > stable"
+  [sudo] password for marcilr: 
+  $ 
+
+  $ grep docker /etc/apt/sources.list
+  deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
+  $
+
 
 Links
 =====
