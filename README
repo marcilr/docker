@@ -16,6 +16,9 @@ cloud/
   Use the Docker Cloud Agent to Bring your Own Host
   https://docs.docker.com/docker-cloud/infrastructure/byoh/
 
+debian/
+  Debian installation of docker
+
 docker.txt
   Docker
   https://www.docker.com/
