@@ -1,0 +1,39 @@
+INSTALL
+Created Thu Mar 15 12:29:37 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Installation of Docker for Debian
+
+1. Prerequisites [1]
+64-bit Debian or Raspbian versions:
+o Buster 10 (Docker CE 17.11 Edge only)
+o Stretch 9 (stable) / Raspbian Stretch   <=== Running Stretch 9.4 amd64
+o Jessie 8 (LTS) / Raspbian Jessie
+o Wheezy 7.7 (LTS)
+
+Docker CE is supported on both x86_64 (or amd64)
+and armhf architectures for Jessie and Stretch.
+
+2. Linux kernel 3.10 or higher:[2]
+$ uname -r
+4.9.0-4-amd64
+$
+
+3. Uninstall old versions:[1]
+# aptitude remove docker docker-engine docker.io
+
+None of these packages were installed.
+
+
+
+Links
+=====
+[1] Get Docker CE for Debian
+Installation instructions
+https://docs.docker.com/install/linux/docker-ce/debian/
+
+[2 Setup instructions
+Get Docker CE on Debian
+Docker Community Edition for Debian
+https://store.docker.com/editions/community/docker-ce-server-debian/plans/docker-ce-server-debian-tier?tab=instructions
