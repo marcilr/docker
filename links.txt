@@ -18,6 +18,15 @@ https://docs.docker.com/engine/reference/commandline/build/
 Configure and troubleshoot the Docker daemon
 https://docs.docker.com/config/daemon/
 
+	
+What is Docker and When to Use It
+Lucas Carlson
+APRIL 22, 2014
+o How Docker Is Like Java
+  Java's promise: Write Once. Run Anywhere.
+Some very good details here
+https://www.ctl.io/developers/blog/post/what-is-docker-and-when-to-use-it/
+
 Post-installation steps for Linux
 Configure Docker to start on boot
 https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user
