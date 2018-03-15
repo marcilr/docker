@@ -3,7 +3,7 @@ Created Thu Mar 15 12:15:07 AKDT 2018
 Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 
-Debian installation of docker
+Docker for Debian
 
 
 Docker for Debian is the best way to install the Docker
