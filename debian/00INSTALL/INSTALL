@@ -92,7 +92,7 @@ v. Use the following command to set up the stable repository.
 
   Looks good
 
-vi. Updated with docker repository configure:
+vi. Update now the docker repository has been configured:
   $ sudo aptutude update 
   ...
   Err https://download.docker.com/linux/debian stretch Release
@@ -102,6 +102,72 @@ vi. Updated with docker repository configure:
   does not have a Release file.
   ...
   $
+
+  Googling it looks like this error relates to the libcurl3-gnutls version.
+  Apparently downgrading libcurl3 resolves the issue:
+
+  Current new broken version:
+    $ apt-cache showpkg libcurl3-gnutls
+    Package: libcurl3-gnutls
+    Versions: 
+    7.52.1-5+deb9u4 (/var/lib/apt/lists/ftp.us.debian.org_\
+    debian_dists_stable_main_binary-amd64_Packages) \
+    (/var/lib/dpkg/status)
+    ...
+    $
+
+  Install working older version:
+    $ sudo aptitude install libcurl3-gnutls=7.38.0-4+deb8u4
+    Unable to find a version "7.38.0-4+deb8u4" for the package "libcurl3-gnutls"
+    Unable to apply some actions, aborting
+    $
+
+  The above failed so downloaded libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb from:
+  http://security.debian.org/debian-security/pool/updates/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb
+
+  Install libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb:
+  $ sudo dpkg -i libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb[sudo] password for marcilr: 
+  dpkg: warning: downgrading libcurl3-gnutls:amd64 from 7.52.1-5+deb9u4 to 7.38.0-4+deb8u10
+  (Reading database ... 364759 files and directories currently installed.)
+  Preparing to unpack libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb ...
+  Unpacking libcurl3-gnutls:amd64 (7.38.0-4+deb8u10) over (7.52.1-5+deb9u4) ...
+  Setting up libcurl3-gnutls:amd64 (7.38.0-4+deb8u10) ...
+  Processing triggers for libc-bin (2.24-11+deb9u3) ...
+  $
+
+  Verify old libcurl3-gnutls installed:
+  $ dpkg -l | grep libcurl3-gnutls
+  ii  libcurl3-gnutls:amd64   7.38.0-4+deb8u10   amd64   \
+  easy-to-use client-side URL transfer library (GnuTLS flavour)
+  $ 
+
+  Prior, working, libcurl3-gnutls looks good.
+
+  Update with docker repository configure:
+  $ sudo aptutude update
+  Ign http://dl.google.com/linux/chrome/deb stable InRelease
+  Hit http://download.virtualbox.org/virtualbox/debian stretch InRelease
+  Ign http://ftp.us.debian.org/debian stable InRelease
+  Hit http://dl.google.com/linux/chrome/deb stable Release
+  Hit http://ftp.us.debian.org/debian stable Release
+  Get: 1 https://download.docker.com/linux/debian stretch InRelease [39.1 kB]
+  Get: 2 https://download.docker.com/linux/debian stretch/stable amd64 Packages [3,271 B]
+  Fetched 42.4 kB in 0s (56.3 kB/s)     
+                                         
+  Current status: 41476 (+1) new.
+  $ 
+
+  This now works that
+
+
+Filelist
+========
+libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb
+  Download Page for libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb on AMD64 machines
+  The latest libcurl3-gnutls 7.52.1-5+deb9u4 throws error:
+    gnutls_handshake() failed: Public key signature verification has failed.
+  https://packages.debian.org/jessie/amd64/libcurl3-gnutls/download
+  http://security.debian.org/debian-security/pool/updates/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb
 
 
 Links
@@ -118,3 +184,9 @@ https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-reposi
 Get Docker CE on Debian
 Docker Community Edition for Debian
 https://store.docker.com/editions/community/docker-ce-server-debian/plans/docker-ce-server-debian-tier?tab=instructions
+
+Download Page for libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb on AMD64 machines
+The latest libcurl3-gnutls 7.52.1-5+deb9u4 throws error:
+  gnutls_handshake() failed: Public key signature verification has failed.
+http://security.debian.org/debian-security/pool/updates/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb
+https://packages.debian.org/jessie/amd64/libcurl3-gnutls/download
