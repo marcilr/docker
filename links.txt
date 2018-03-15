@@ -8,6 +8,25 @@ Docker related links
 
 <=== Hanh Thu Dec 14, 2017
 
+Get started with Docker Compose
+https://docs.docker.com/compose/gettingstarted/
+
+docker build
+Build an image from a Dockerfile
+https://docs.docker.com/engine/reference/commandline/build/
+
+Configure and troubleshoot the Docker daemon
+https://docs.docker.com/config/daemon/
+
+Post-installation steps for Linux
+Configure Docker to start on boot
+https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user
+
+Securing Docker with TLS certificates
+January 3, 2016   
+http://tech.paulcz.net/2016/01/secure-docker-with-tls/
+
+
 
 Links
 =====
