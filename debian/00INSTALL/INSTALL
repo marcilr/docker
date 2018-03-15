@@ -5,6 +5,8 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 Installation of Docker for Debian
 
+(installed on covellite - March 15, 2018)
+
 1. Prerequisites [1]
 64-bit Debian or Raspbian versions:
 o Buster 10 (Docker CE 17.11 Edge only)
