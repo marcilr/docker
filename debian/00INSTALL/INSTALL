@@ -15,7 +15,7 @@ o Wheezy 7.7 (LTS)
 Docker CE is supported on both x86_64 (or amd64)
 and armhf architectures for Jessie and Stretch.
 
-2. Linux kernel 3.10 or higher:[2]
+2. Linux kernel 3.10 or higher:[3]
 $ uname -r
 4.9.0-4-amd64
 $
@@ -25,7 +25,19 @@ $
 
 None of these packages were installed.
 
+4. Add Docker CD repository:[2]
+i. Update debian:
+   # aptitude update
+   # aptitude upgrade
 
+ii. Added packages:
+   # aptitude install apt-transport-https
+   # aptitude install ca-certificates
+   # aptitude install curl
+   # aptitude install gnupg2
+   # aptitude install software-properties-common
+
+All packages installed already
 
 Links
 =====
@@ -33,7 +45,10 @@ Links
 Installation instructions
 https://docs.docker.com/install/linux/docker-ce/debian/
 
-[2 Setup instructions
+[2] Set up the repository
+https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-repository
+
+[3] Setup instructions
 Get Docker CE on Debian
 Docker Community Edition for Debian
 https://store.docker.com/editions/community/docker-ce-server-debian/plans/docker-ce-server-debian-tier?tab=instructions
