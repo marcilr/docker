@@ -1,0 +1,39 @@
+binaries.txt
+Created Thu Mar 15 17:11:32 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Binaries
+
+
+There is no official support of docker in Ubuntu 17.04 yet.
+An alternative is to download and install the binary of
+docker from https://github.com/moby/moby/releases.
+
+For example if you want to install docker version
+17.04.0-ce from binary, follow these steps:
+
+$ wget https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tgz
+$ tar xzvf docker-17.04.0-ce.tgz
+$ cd docker
+
+This docker directory contains all the binaries.  You need
+to add this directory to your PATH.  You will need to
+manually start dockerd first.  This page[2] contains more
+details about how to install and run docker from a binary.[1]
+
+
+
+Links
+=====
+[1] How to install Docker on Ubuntu 17.04
+Some very good information and access to biaries here.
+https://askubuntu.com/questions/909691/how-to-install-docker-on-ubuntu-17-04
+
+[2] This page
+https://docs.docker.com/engine/installation/binaries/#install-static-binaries
+
+moby/moby
+v17.03.2-ce
+@tiborvass tiborvass released this on Jun 27, 2017
+https://github.com/moby/moby/releases
