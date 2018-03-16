@@ -33,7 +33,13 @@ https://askubuntu.com/questions/909691/how-to-install-docker-on-ubuntu-17-04
 [2] This page
 https://docs.docker.com/engine/installation/binaries/#install-static-binaries
 
+Install Docker CE from binaries   <===
+https://docs.docker.com/install/linux/docker-ce/binaries/
+
 moby/moby
 v17.03.2-ce
 @tiborvass tiborvass released this on Jun 27, 2017
 https://github.com/moby/moby/releases
+
+Static binary archive
+https://download.docker.com/linux/static/stable/x86_64/
