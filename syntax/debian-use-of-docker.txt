@@ -46,7 +46,116 @@ such that they do not have to be configured on the command line:
 $ dockerd
 
 
+Securing Docker with TLS certificates
+January 3, 2016
+http://tech.paulcz.net/2016/01/secure-docker-with-tls/
+
 Various items to get dockerd working from marcilr account:
+
+
+o To resolve:
+  $ dockerd
+  WARN[2018-03-14T11:35:11.531109651-08:00] \
+    [!] DON'T BIND ON ANY IP ADDRESS WITHOUT \
+    setting --tlsverify IF YOU DON'T KNOW WHAT YOU'RE DOING [!] 
+  DEBU[2018-03-14T11:35:11.531262677-08:00] \
+    Listener created for HTTP on tcp (127.0.0.1:2376) 
+  INFO[2018-03-14T11:35:11.531754341-08:00] \
+    libcontainerd: started new docker-containerd process  pid=14020
+  INFO[0000] starting containerd                           \
+    module=containerd revision=89623f28b87a6004d4b785663257362d1658a729 \
+    version=v1.0.0
+  INFO[0000] setting subreaper...                          \
+    module=containerd
+  INFO[0000] changing OOM score to -500                    \
+    module=containerd
+  containerd: write /proc/14020/oom_score_adj: permission denied
+  ERRO[2018-03-14T11:35:11.597114154-08:00] \
+    containerd did not exit successfully          \
+    error="exit status 1" module=libcontainerd
+  Failed to connect to containerd: failed to dial \
+    "/var/run/docker/containerd/docker-containerd.sock": \
+    dial unix:///var/run/docker/containerd/docker-containerd.sock: timeout
+  $ 
+
+o To resolve:
+  $ dockerd
+  WARN[2018-03-14T11:28:11.970474202-08:00] \
+  [!] DON'T BIND ON ANY IP ADDRESS WITHOUT \
+  setting --tlsverify IF YOU DON'T KNOW WHAT YOU'RE DOING [!] 
+  DEBU[2018-03-14T11:28:11.970599216-08:00] \
+  Listener created for HTTP on tcp (127.0.0.1:2376) 
+  Failed to connect to containerd: \
+  open /var/run/docker/containerd/docker-containerd.pid: permission denied
+  $
+
+  # chmod 777 /var/run/docker/containerd/
+  # chmod 777 /var/run/docker/containerd/docker-containerd-debug.sock
+  # chmod 777 /var/run/docker/containerd/containerd.toml
+  # chmod 777 /var/run/docker/containerd/daemon/
+  # chmod 777 /var/run/docker/libnetwork/
+  # chmod 777 /var/run/docker/plugins/
+  # chmod 777 /var/run/docker/swarm/
+
+
+o To resolve:
+  $ dockerd
+  WARN[2018-03-14T11:24:43.241915059-08:00] \
+    [!] DON'T BIND ON ANY IP ADDRESS WITHOUT \
+    setting --tlsverify IF YOU DON'T KNOW WHAT YOU'RE DOING [!] 
+  DEBU[2018-03-14T11:24:43.242036110-08:00] \
+    Listener created for HTTP on tcp (127.0.0.1:2376) 
+  Failed to connect to containerd: \
+    mkdir /var/run/docker/containerd: permission denied
+  $ 
+
+  # chmod 777 /var/run/docker
+
+o To resolve:
+  $ dockerd
+  Could not load X509 key pair \
+    (cert: "/var/docker/server.pem", \
+    key: "/var/docker/serverkey.pem"): \
+    open /var/docker/server.pem: no such file or directory
+  $ 
+  
+  Removed server.pem and serverkey.pem
+  from /etc/docker/daemon.json:
+
+Updated:
+{
+  "debug": true,
+  "tls": true,
+  "tlscert": "/var/docker/server.pem",
+  "tlskey": "/var/docker/serverkey.pem",
+  "hosts": ["tcp://127.0.0.1:2376"]
+}
+
+  to
+
+{
+  "debug": true,
+  "tls": false,
+  "hosts": ["tcp://127.0.0.1:2376"]
+}
+
+
+
+o To resolve:
+  $ dockerd
+  Error starting daemon: open /var/run/docker.pid: permission denied
+  $ 
+
+  /var/run -> /run
+
+  # chmod 777 /run
+
+o To resolve:
+  $ dockerd
+  chmod /var/lib/docker: operation not permitted
+  $
+
+  # chown -R marcilr:marcilr /var/lib/docker/
 
 o Created configuration file:
   /etc/docker/daemon.json
