@@ -92,7 +92,7 @@ v. Use the following command to set up the stable repository.
 
   Looks good
 
-vi. Update now the docker repository has been configured:
+vi. Update now that the docker repository has been configured:
   $ sudo aptutude update 
   ...
   Err https://download.docker.com/linux/debian stretch Release
@@ -103,8 +103,8 @@ vi. Update now the docker repository has been configured:
   ...
   $
 
-  Googling it looks like this error relates to the libcurl3-gnutls version.
-  Apparently downgrading libcurl3 resolves the issue:
+  Googling it looks like this error relates to error in the
+  latets libcurl3-gnutls version:
 
   Current new broken version:
     $ apt-cache showpkg libcurl3-gnutls
@@ -116,58 +116,338 @@ vi. Update now the docker repository has been configured:
     ...
     $
 
-  Install working older version:
-    $ sudo aptitude install libcurl3-gnutls=7.38.0-4+deb8u4
-    Unable to find a version "7.38.0-4+deb8u4" for the package "libcurl3-gnutls"
-    Unable to apply some actions, aborting
-    $
+  Installing an older libcurl3-gnutls version like
+  v7.38.0-4 (libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb)
+  resolves the above dependency issues but introduces
+  dependencies on other old libraries.  Not so good
+  a solution.
 
-  The above failed so downloaded libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb from:
-  http://security.debian.org/debian-security/pool/updates/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb
+vi. Installig from Docker CE debs since installing from 
+the Docker repository did not work:
 
-  Install libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb:
-  $ sudo dpkg -i libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb[sudo] password for marcilr: 
-  dpkg: warning: downgrading libcurl3-gnutls:amd64 from 7.52.1-5+deb9u4 to 7.38.0-4+deb8u10
-  (Reading database ... 364759 files and directories currently installed.)
-  Preparing to unpack libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb ...
-  Unpacking libcurl3-gnutls:amd64 (7.38.0-4+deb8u10) over (7.52.1-5+deb9u4) ...
-  Setting up libcurl3-gnutls:amd64 (7.38.0-4+deb8u10) ...
-  Processing triggers for libc-bin (2.24-11+deb9u3) ...
+i. Get latest stable Docker CE:
+$ wget https://download.docker.com/linux/debian/dists/stretch/\
+pool/stable/amd64/docker-ce_17.12.1~ce-0~debian_amd64.deb
+
+ii. Install latest stable Docker CE:
+$ sudo dpkg -i docker-ce_17.12.1~ce-0~debian_amd64.deb
+
+Got a davmail conflict removed for reinstall attemp:
+$ sudo aptitude remove docker-ce davmail
+The following packages will be REMOVED:  
+
+Try Docker CE install again:
+$ sudo dpkg -i docker-ce_17.12.1~ce-0~debian_amd64.deb
+Selecting previously unselected package docker-ce.
+(Reading database ... 364451 files and directories currently installed.)
+Preparing to unpack docker-ce_17.12.1~ce-0~debian_amd64.deb ...
+Unpacking docker-ce (17.12.1~ce-0~debian) ...
+Setting up docker-ce (17.12.1~ce-0~debian) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Job for docker.service failed because the control process exited with error code.
+See "systemctl status docker.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript docker, action "start" failed.
+docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: activating (auto-restart) (Result: exit-code) since Thu 2018-03-15 14:48:26 AKDT; 5ms ago
+     Docs: https://docs.docker.com
+  Process: 26217 ExecStart=/usr/bin/dockerd -H fd:// (code=exited, status=1/FAILURE)
+ Main PID: 26217 (code=exited, status=1/FAILURE)
+      CPU: 25ms
+
+Mar 15 14:48:26 covellite systemd[1]: docker.service: Unit entered failed state.
+Mar 15 14:48:26 covellite systemd[1]: docker.service: Failed with result 'exit-code'.
+dpkg: error processing package docker-ce (--install):
+ subprocess installed post-installation script returned error exit status 1
+Processing triggers for systemd (232-25+deb9u2) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+Errors were encountered while processing:
+ docker-ce
+$ 
+
+Uncertain if this installed correctly due to above error.
+
+$ type dockerd
+dockerd is /usr/bin/dockerd
+$
+
+$ ls /etc/init.d/docker 
+/etc/init.d/docker
+$
+
+Check if docker is running:
+$ ps ax | grep [d]ocker
+$
+
+Docker not running start it:
+$ sudo /etc/init.d/docker start
+[....] Starting docker (via systemctl): docker.serviceJob
+for docker.service failed because the control process exited with error code.
+See "systemctl status docker.service" and "journalctl -xe" for details.
+ failed!
+$
+
+# systemctl status docker.service
+docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Thu 2018-03-15 14:53:12 AKDT; 51s ago
+     Docs: https://docs.docker.com
+  Process: 29063 ExecStart=/usr/bin/dockerd -H fd:// (code=exited, status=1/FAILURE)
+ Main PID: 29063 (code=exited, status=1/FAILURE)
+      CPU: 25ms
+
+Mar 15 14:53:12 covellite systemd[1]: docker.service: Failed with result 'exit-code'.
+Mar 15 14:53:12 covellite systemd[1]: docker.service: Service hold-off time over, scheduling restart.
+Mar 15 14:53:12 covellite systemd[1]: Stopped Docker Application Container Engine.
+Mar 15 14:53:12 covellite systemd[1]: docker.service: Start request repeated too quickly.
+Mar 15 14:53:12 covellite systemd[1]: Failed to start Docker Application Container Engine.
+Mar 15 14:53:12 covellite systemd[1]: docker.service: Unit entered failed state.
+Mar 15 14:53:12 covellite systemd[1]: docker.service: Failed with result 'exit-code'.
+Mar 15 14:53:56 covellite systemd[1]: docker.service: Start request repeated too quickly.
+Mar 15 14:53:56 covellite systemd[1]: Failed to start Docker Application Container Engine.
+Mar 15 14:53:56 covellite systemd[1]: docker.service: Failed with result 'exit-code'.
+#
+
+
+Another go from:
+  How to Install Docker on Debian 9 Stretch
+  https://www.itzgeek.com/how-tos/linux/debian/how-to-install-docker-on-debian-9.html
+
+1. Update and make sure apt supports https method:
+$ sudo apt-get update
+$ sudo apt-get install -y apt-transport-https ca-certificates wget software-properties-common
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+apt-transport-https is already the newest version (1.4.8).
+ca-certificates is already the newest version (20161130+nmu1).
+software-properties-common is already the newest version (0.96.20.2-1).
+wget is already the newest version (1.18-5+deb9u1).
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+$
+
+2. Add the GPG key for Docker repository on your system.
+$ wget https://download.docker.com/linux/debian/gpg 
+$ sudo apt-key add gpg
+OK
+$
+
+Add Docker’s official GPG key:
+  $ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+  OK
   $
-
-  Verify old libcurl3-gnutls installed:
-  $ dpkg -l | grep libcurl3-gnutls
-  ii  libcurl3-gnutls:amd64   7.38.0-4+deb8u10   amd64   \
-  easy-to-use client-side URL transfer library (GnuTLS flavour)
-  $ 
-
-  Prior, working, libcurl3-gnutls looks good.
-
-  Update with docker repository configure:
-  $ sudo aptutude update
-  Ign http://dl.google.com/linux/chrome/deb stable InRelease
-  Hit http://download.virtualbox.org/virtualbox/debian stretch InRelease
-  Ign http://ftp.us.debian.org/debian stable InRelease
-  Hit http://dl.google.com/linux/chrome/deb stable Release
-  Hit http://ftp.us.debian.org/debian stable Release
-  Get: 1 https://download.docker.com/linux/debian stretch InRelease [39.1 kB]
-  Get: 2 https://download.docker.com/linux/debian stretch/stable amd64 Packages [3,271 B]
-  Fetched 42.4 kB in 0s (56.3 kB/s)     
-                                         
-  Current status: 41476 (+1) new.
-  $ 
-
-  This now works that
+  --Get Docker CE for Debian
+    https://docs.docker.com/install/linux/docker-ce/debian/
 
 
-Filelist
-========
-libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb
-  Download Page for libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb on AMD64 machines
-  The latest libcurl3-gnutls 7.52.1-5+deb9u4 throws error:
-    gnutls_handshake() failed: Public key signature verification has failed.
-  https://packages.debian.org/jessie/amd64/libcurl3-gnutls/download
-  http://security.debian.org/debian-security/pool/updates/main/c/curl/libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb
+3. Add the official Docker repository to the system
+   by running below command in the terminal.
+$ echo "deb [arch=amd64] https://download.docker.com/linux/debian \
+$(lsb_release -cs) stable" | sudo tee -a /etc/apt/sources.list.d/docker.list
+deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
+$
+
+$ cat /etc/apt/sources.list.d/docker.list
+deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
+$
+
+4. Update the apt database.
+$ sudo aptitude update
+...
+Err https://download.docker.com/linux/debian stretch Release
+  gnutls_handshake() failed: Public key signature verification has failed.
+...
+$
+
+$ sudo apt-get update
+...
+Err:10 https://download.docker.com/linux/debian stretch/stable amd64 Packages
+  gnutls_handshake() failed: Public key signature verification has failed.
+...
+$
+
+$ gnutls-cli -V -p 443 download.docker.com
+...
+Displayed cool key info
+...
+- Peer has closed the GnuTLS connection
+$
+
+
+This relates to the libcurl3-gnutls error:
+  Debian: git error gnutls_handshake() failed: Public key signature verification has failed.
+  4 Comments[Author: Michael Albert Category: Debian ]
+  However: 2016-12-13
+  https://michlstechblog.info/blog/debian-git-error-gnutls_handshake-failed-public-key-signature-verification-has-failed/
+
+
+sudo apt-get update
+Make sure you are installing Docker from the official repository, not from the default Debian repository.
+
+sudo apt-cache policy docker-ce
+You should see the output like below with the Docker repository details.
+
+docker-ce:
+  Installed: (none)
+  Candidate: 17.06.0~ce-0~debian
+  Version table:
+     17.06.0~ce-0~debian 500
+        500 https://download.docker.com/linux/debian stretch/stable amd64 Packages
+     17.03.2~ce-0~debian-stretch 500
+        500 https://download.docker.com/linux/debian stretch/stable amd64 Packages
+     17.03.1~ce-0~debian-stretch 500
+        500 https://download.docker.com/linux/debian stretch/stable amd64 Packages
+     17.03.0~ce-0~debian-stretch 500
+        500 https://download.docker.com/linux/debian stretch/stable amd64 Packages
+Install Docker
+Install Docker using the “apt-get” command.
+
+￼
+ 
+sudo apt-get -y install docker-ce
+Control Docker service
+To start Docker, run:
+
+sudo systemctl start docker
+To stop Docker service, run:
+
+sudo systemctl stop docker
+To restart Docker service, run:
+
+sudo systemctl restart docker
+To check the status of Docker service, run:
+
+sudo systemctl status docker
+To enable Docker service to autostart on system boot, run:
+
+sudo systemctl enable docker
+Verify Docker Installation
+To test the Docker installation, we will run “hello-world” container.
+
+sudo docker run hello-world
+Below output confirms that we have correctly installed Docker on Debian OS.
+
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+b04784fba78d: Pull complete 
+Digest: sha256:f3b3b28a45160805bb16542c9531888519430e9e6d6ffc09d72261b0d26ff74f
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+Allow Non-root user to run Docker
+By default, to run Docker commands, the user should have root privileges or equivalent privileges via sudo. Sometimes we may need to allow non-root users to run Docker containers, so follow the below steps to allow them to run containers.
+
+Create a group “docker“, if it does not exist.
+
+sudo groupadd docker
+Add your user to docker group, replace “raj” with your username.
+
+sudo useradd raj
+Add a user to docker group.
+
+sudo usermod -aG docker raj
+Log out and log back in. You should now be able to run Docker commands without prefixing sudo.
+
+docker run hello-world
+Interested Topics
+Docker BasicTopics:
+
+1: Top Important Docker Commands – Working with Docker Containers
+
+2: Working with Docker Images – Building Docker Images
+
+￼
+ 
+3: How to Build Docker Images with DockerFile
+
+Docker Advanced Topics:
+
+1: How to Setup Docker Private Registry on CentOS 7 / Ubuntu 16.04 / Fedora 27/26
+
+2: How to Install and Configure Docker Swarm on CentOS 7 / Ubuntu 16.04 / Fedora 27/26
+
+That’s All.
+
+￼
+ 
+debian 8debian 9docker
+ 0
+	Share
+ PREV POST
+
+Install LibreNMS on CentOS 7 / Ubuntu 16.04 – A Network and Server Monitoring Tool
+
+NEXT POST 
+
+How to Reset Forgotten Windows 10 Password
+
+YOU MIGHT ALSO LIKE
+UBUNTU
+How To Install MySQL 5.7/8.0 on Ubuntu 16.04/14.04 & Debian 9/8
+
+LINUX
+20 Useful apt, apt-get, and apt-cache Command Examples for Package Management
+
+LINUX
+Setup Let’s Encrypt With Apache on CentOS 7 & 6 / RHEL 7 & 6 / Debian…
+
+LINUX
+How to Monitor Linux Machines with Observium
+
+LINUX
+Install Observium on CentOS 7 / Debian 9 / Ubuntu 16.04 – A Network Management…
+
+UBUNTU
+How to Install PHP 5.6 on Ubuntu 16.04 & Debian 9
+
+ PREV  NEXT 
+￼￼￼
+TOP POSTS
+
+CENTOS/REDHAT
+Install xrdp on CentOS 7 / RHEL 7
+
+CENTOS/REDHAT
+Install Gnome GUI on CentOS 7 / RHEL 7
+
+MINIHOWTO
+Change default network name (ens33) to old “eth0” on Ubuntu…
+
+UBUNTU
+Install μTorrent (uTorrent) on Ubuntu 14.04
+
+CENTOS/REDHAT
+Configure High-Avaliablity Cluster on CentOS 7 / RHEL 7
+
+CENTOS/REDHAT
+How to Install and Configure VNC Server in CentOS 7 / RHEL 7
+
+ PREV  NEXT  1 of 121
+RECENT POSTS
+
+EaseUS Data Recovery Wizard Free can help recover Hard disk…
+
+Mar 15, 2018
+How to Easily Install ONLYOFFICE Desktop Editors 4.8.7 in…
+
+Mar 13, 2018
+How To Install MySQL 5.7/8.0 on Ubuntu 16.04/14.04 &…
+
+Mar 6, 2018
+20 Useful apt, apt-get, and apt-cache Command Examples for…
+
+Feb 27, 2018
+Configure FreeIPA server On CentOS 7 / RHEL 7 – A…
+
+Feb 22, 2018
+ PREV  NEXT  1 of 146
+ADVERTISEMENT
+￼
+ 
+STAY WITH US
+
 
 
 Links
@@ -184,6 +464,9 @@ https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-reposi
 Get Docker CE on Debian
 Docker Community Edition for Debian
 https://store.docker.com/editions/community/docker-ce-server-debian/plans/docker-ce-server-debian-tier?tab=instructions
+
+Dockerd daemon manpage and arguments
+https://docs.docker.com/engine/reference/commandline/dockerd/
 
 Download Page for libcurl3-gnutls_7.38.0-4+deb8u10_amd64.deb on AMD64 machines
 The latest libcurl3-gnutls 7.52.1-5+deb9u4 throws error:
