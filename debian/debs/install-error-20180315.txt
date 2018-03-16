@@ -1,0 +1,158 @@
+install-error-20180315.txt
+Created Thu Mar 15 16:08:49 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Followed:
+  Failed to start Docker Application Container Engine
+  https://forums.docker.com/t/failed-to-start-docker-application-container-engine/35594
+
+Remove hosts line from daemon.json
+
+/etc/docker/daemon.json
+{
+  "debug": true,
+  "tls": false,
+  "hosts": ["tcp://127.0.0.1:2376"]
+}
+
+  to
+
+{
+  "debug": true,
+  "tls": false,
+}
+
+
+Create a conf file in /etc/systemd/system/docker.service.d,
+
+e.g
+  /etc/systemd/system/docker.service.d/hosts.conf
+
+Configure the start with the extra options.  In my case,
+ubuntu with systemd, it uses file discovery sockets (fd://),
+and I added a tcp one.
+
+/etc/systemd/system/docker.service.d/hosts.conf
+[Service]
+ExecStart=
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2736
+
+Save, reload:
+$ sudo systemctl daemon-reload
+
+Restart the service:
+# systemctl restart docker.service
+root@covellite:/etc/systemd/system/docker.service# sudo systemctl restart docker.service
+Failed to restart docker.service: Unit docker.service is not loaded properly: Is a directory.
+See system logs and 'systemctl status docker.service' for details.
+#
+
+This did not work reverted changes.
+
+---------------------------------------------------------
+
+$ sudo dpkg -i  docker-ce_17.12.1~ce-0~debian_amd64.deb
+Selecting previously unselected package docker-ce.
+(Reading database ... 360676 files and directories currently installed.)
+Preparing to unpack docker-ce_17.12.1~ce-0~debian_amd64.deb ...
+Unpacking docker-ce (17.12.1~ce-0~debian) ...
+Setting up docker-ce (17.12.1~ce-0~debian) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Job for docker.service failed because the control process exited with error code.
+See "systemctl status docker.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript docker, action "start" failed.
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: activating (auto-restart) (Result: exit-code) since Thu 2018-03-15 16:07:41 AKDT; 5ms ago
+     Docs: https://docs.docker.com
+  Process: 17783 ExecStart=/usr/bin/dockerd -H fd:// (code=exited, status=1/FAILURE)
+ Main PID: 17783 (code=exited, status=1/FAILURE)
+      CPU: 23ms
+
+Mar 15 16:07:41 covellite systemd[1]: docker.service: Unit entered failed state.
+Mar 15 16:07:41 covellite systemd[1]: docker.service: Failed with result 'exit-code'.
+dpkg: error processing package docker-ce (--install):
+ subprocess installed post-installation script returned error exit status 1
+Processing triggers for systemd (232-25+deb9u2) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+Errors were encountered while processing:
+ docker-ce
+$
+
+
+# systemctl status docker.service
+docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Thu 2018-03-15 16:07:42 AKDT; 2min 3s ago
+     Docs: https://docs.docker.com
+  Process: 18722 ExecStart=/usr/bin/dockerd -H fd:// (code=exited, status=1/FAILURE)
+ Main PID: 18722 (code=exited, status=1/FAILURE)
+      CPU: 28ms
+
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Unit entered failed state.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Failed with result 'exit-code'.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Service hold-off time over, scheduling restart.
+Mar 15 16:07:42 covellite systemd[1]: Stopped Docker Application Container Engine.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Start request repeated too quickly.
+Mar 15 16:07:42 covellite systemd[1]: Failed to start Docker Application Container Engine.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Unit entered failed state.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Failed with result 'exit-code'.
+# 
+
+
+# journalctl -xe
+-- The result is failed.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Unit entered failed state.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Failed with result 'exit-code'.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Service hold-off time over, scheduling restart.
+Mar 15 16:07:42 covellite systemd[1]: Stopped Docker Application Container Engine.
+-- Subject: Unit docker.service has finished shutting down
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Unit docker.service has finished shutting down.
+Mar 15 16:07:42 covellite systemd[1]: Closed Docker Socket for the API.
+-- Subject: Unit docker.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Unit docker.socket has finished shutting down.
+Mar 15 16:07:42 covellite systemd[1]: Stopping Docker Socket for the API.
+-- Subject: Unit docker.socket has begun shutting down
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Unit docker.socket has begun shutting down.
+Mar 15 16:07:42 covellite systemd[1]: Starting Docker Socket for the API.
+-- Subject: Unit docker.socket has begun start-up
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Unit docker.socket has begun starting up.
+Mar 15 16:07:42 covellite systemd[1]: Listening on Docker Socket for the API.
+-- Subject: Unit docker.socket has finished start-up
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Unit docker.socket has finished starting up.
+-- 
+-- The start-up result is done.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Start request repeated too quickly.
+Mar 15 16:07:42 covellite systemd[1]: Failed to start Docker Application Container Engine.
+-- Subject: Unit docker.service has failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Unit docker.service has failed.
+-- 
+-- The result is failed.
+Mar 15 16:07:42 covellite systemd[1]: docker.socket: Unit entered failed state.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Unit entered failed state.
+Mar 15 16:07:42 covellite systemd[1]: docker.service: Failed with result 'exit-code'.
+Mar 15 16:07:43 covellite sudo[17682]: pam_unix(sudo:session): session closed for user root
+Mar 15 16:07:56 covellite smbd[17698]: pam_unix(samba:session): session closed for user nobody
+Mar 15 16:07:56 covellite smbd[17700]: pam_unix(samba:session): session closed for user nobody
+#
+
