@@ -1,0 +1,17 @@
+README
+Created Sun Mar 18 11:01:32 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+gpg
+  Docker download gpg key.          
+  Fetched with:
+  $ wget https://download.docker.com/linux/debian/gpg
+
+INSTALL
+  Installation of Docker for Debian
+
+links.txt
+  Installation of Docker for Debian related links
