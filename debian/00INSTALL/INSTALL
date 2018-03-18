@@ -240,6 +240,34 @@ Add Docker’s official GPG key:
   --Get Docker CE for Debian
     https://docs.docker.com/install/linux/docker-ce/debian/
 
+Also trying wget:
+  $ wget -qO - https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+  OK
+  $
+  --How to add a GPG key to the apt sources keyring?
+    https://askubuntu.com/questions/291035/how-to-add-a-gpg-key-to-the-apt-sources-keyring
+
+
+Verify Docker’s official GPG key:
+  $ sudo apt-key fingerprint 0EBFCD88
+  pub   rsa4096 2017-02-22 [SCEA]
+        9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+  uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+  sub   rsa4096 2017-02-22 [S]
+
+  $
+
+  --Get Docker CE for Debian
+    https://docs.docker.com/install/linux/docker-ce/debian/
+
+  $ sudo apt-key list
+  ...
+  pub   rsa4096 2017-02-22 [SCEA]
+        9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+  uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+  sub   rsa4096 2017-02-22 [S]
+  ...
+  $
 
 3. Add the official Docker repository to the system
    by running below command in the terminal.
@@ -251,6 +279,7 @@ $
 $ cat /etc/apt/sources.list.d/docker.list
 deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
 $
+
 
 4. Update the apt database.
 $ sudo aptitude update
@@ -273,6 +302,11 @@ Displayed cool key info
 ...
 - Peer has closed the GnuTLS connection
 $
+
+5. Despite the above gnutls error install docker-ce:
+$ sudo aptitude install docker-ce
+
+
 
 
 This relates to the libcurl3-gnutls error:
