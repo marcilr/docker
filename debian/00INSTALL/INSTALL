@@ -46,6 +46,10 @@ $ echo $PATH
 /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 $
 
+$ type dockerd
+dockerd is /usr/local/docker/dockerd
+$ 
+
 Looks good.
 
 
