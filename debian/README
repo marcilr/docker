@@ -8,11 +8,15 @@ Filelist
 00INSTALL/
   Installation of Docker for Debian
 
+00TARBALLS/
+  Tarballs
+
 debian.txt
   Docker for Debian
 
 debs/
   Debain Docker CE debs
+  NOTE: Could not get these to work properly (March 16, 2018)
 
 links.txt
   Debian installation of docker related links
