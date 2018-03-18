@@ -5,6 +5,9 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+00INSTALL/
+  Install Docker Compose
+
 Dockerfile/
   Define your app’s environment with a Dockerfile so it can
   be reproduced anywhere.
