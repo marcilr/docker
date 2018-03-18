@@ -6,7 +6,7 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 Filelist
 ========
 4-files-required.txt
-  Four files needed for rails application:
+  Four files needed to build application
   1. Dockerfile - Define exactly what needs to be included in Docker container.
   2. Gemfile - just loads Rails
   3. Gemfile.lock - to build our Dockerfile
