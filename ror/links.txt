@@ -14,3 +14,6 @@ https://semaphoreci.com/community/tutorials/dockerizing-a-ruby-on-rails-applicat
 Quickstart: Compose and Rails
 https://docs.docker.com/compose/rails/
 
+Ruby on Rails
+http://rubyonrails.org/
+
