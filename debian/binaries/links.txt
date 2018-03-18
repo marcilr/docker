@@ -9,18 +9,26 @@ Docker tarball related links
 Links
 =====
 How to install Docker on Ubuntu 17.04
-Some very good information and access to binaries here.
+Some very good information and access to binaries here
+and Ubuntu 17.04 docker link:
+$ wget https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tgz
+$ tar xzvf docker-17.04.0-ce.tgz
+$ cd docke
 https://askubuntu.com/questions/909691/how-to-install-docker-on-ubuntu-17-04
 
-This page
+Install Docker CE from binaries
+Has link to static binaries archive:
+  https://download.docker.com/linux/static/stable/
 https://docs.docker.com/engine/installation/binaries/#install-static-binaries
 
 Install Docker CE from binaries   <===
 https://docs.docker.com/install/linux/docker-ce/binaries/
 
 moby/moby
-v17.03.2-ce
-@tiborvass tiborvass released this on Jun 27, 2017
+Source for docker
+Latest is:
+  v17.03.2-ce
+  @tiborvass tiborvass released this on Jun 27, 2017
 https://github.com/moby/moby/releases
 
 Static binary archive
