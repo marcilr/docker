@@ -5,7 +5,52 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 Installation of Docker for Debian
 
-(installed on covellite - March 15, 2018)
+
+Installed on covellite - Sunday March 18, 2018
+
+1. Get docker-17.12.1-ce.tgz (33MB) tarball:
+
+$ wget https://download.docker.com/linux/static/stable/\
+x86_64/docker-17.12.1-ce.tgz
+
+2. Expand docker-17.12.1-ce.tgz tarball:
+
+$ tar zxvpf docker-17.12.1-ce.tgz
+docker/
+docker/docker-containerd-shim
+docker/docker-containerd
+docker/docker-runc
+docker/docker
+docker/docker-init
+docker/docker-containerd-ctr
+docker/docker-proxy
+docker/dockerd
+$
+
+3. Move docker/ to /usr/local/docker-17.12.1-ce/
+# mv docker /usr/local/docker-docker-17.12.1-ce
+# ln -s /usr/local/docker-docker-17.12.1-ce/ /usr/local/docker
+
+$ Add docker to PATH in user's ~/.bashrc:
+$ nano +156 ~/.bashrc
+PATH=/home/marcilr/bin:${GOROOT}/bin:${PATH}
+  to
+PATH=/home/marcilr/bin:/usr/local/docker:${GOROOT}/bin:${PATH}
+
+ctrl-x 
+
+Start new terminal window and verify path:
+
+$ echo $PATH
+/home/marcilr/bin:/usr/local/docker:/home/marcilr/go/bin:\
+/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+$
+
+Looks good.
+
+
+-----------------------------------------------
+(Installed on covellite - March 15, 2018)
 
 0. Remove prior test installation of Docker CE:
   $ sudo aptitude remove docker-ce
