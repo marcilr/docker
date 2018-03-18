@@ -8,8 +8,19 @@ Ruby on Rails related links
 
 Links
 =====
+Build a Minimal Docker Container for Ruby Apps
+Last updated: 2018-02-27
+by Ilija Eftimov
+Looks good
+https://blog.codeship.com/build-minimal-docker-container-ruby-apps/
+
 Dockerizing a Ruby on Rails Application
 https://semaphoreci.com/community/tutorials/dockerizing-a-ruby-on-rails-application
+
+Dockerizing Ruby Application
+08 June 2016
+Fair amount of detail on ruby base images
+http://blog.kontena.io/dockerizing-ruby-application/
 
 Quickstart: Compose and Rails
 https://docs.docker.com/compose/rails/
