@@ -42,6 +42,9 @@ packages.txt
 projects/
   Projects for docker
 
+ror/
+  Ruby on Rails
+
 syntax/
   Syntax
 
