@@ -5,7 +5,14 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
-docker-17.04.0-ce.tgz
+docker-17.12.1-ce.tgz (33M)
+  2018-02-28 01:52
+  Index of /linux/static/stable/x86_64/
+  Downloaded: March 18, 2018)
+  https://download.docker.com/linux/static/stable/x86_64/
+  https://download.docker.com/linux/static/stable/x86_64/docker-17.12.1-ce.tgz
+
+docker-17.04.0-ce.tgz (26M)
   There is no official support of docker in Ubuntu 17.04 yet.
   An alternative is to download and install the binary of
   docker from https://github.com/moby/moby/releases.
