@@ -23,3 +23,13 @@ Dockerfile.txt
   --Quickstart: Compose and Rails
     https://docs.docker.com/compose/rails/
 
+Gemfile.txt
+  "Create a bootstrap Gemfile which just loads Rails.
+  It’ll be overwritten in a moment by rails new."   
+
+  source 'https://rubygems.org'
+  gem 'rails', '5.0.0.1'
+
+  --Quickstart: Compose and Rails
+    https://docs.docker.com/compose/rails/
+
