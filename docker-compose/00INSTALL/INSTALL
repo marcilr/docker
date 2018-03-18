@@ -1,0 +1,38 @@
+INSTALL
+Created Sun Mar 18 14:39:16 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Install Docker Compose on Debian stretch 9.4 amd64
+
+
+1. Get latest copy of Docker Compose:
+$ sudo curl -L https://github.com/docker/compose/releases/\
+download/1.19.0/docker-compose-`uname -s`-`uname -m` \
+-o /usr/local/bin/docker-compose
+
+2. Apply executable permissions to the binary:
+$ sudo chmod +x /usr/local/bin/docker-compose
+
+$ type docker-compose
+docker-compose is hashed (/usr/local/bin/docker-compose)
+$ 
+
+3. Verify bash-completion is installed:
+$ dpkg -l | grep bash-completion
+ii  bash-completion                       1:2.1-4.3                                   all          programmable completion for the bash shell
+$
+
+4. Test the installation.
+$ docker-compose --version
+docker-compose version 1.19.0, build 9e633ef
+$ 
+
+Looks good
+
+
+Links
+=====
+Install Docker Compose
+You can run Compose on macOS, Windows, and 64-bit Linux.
+https://docs.docker.com/compose/install/
