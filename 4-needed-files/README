@@ -23,6 +23,14 @@ Dockerfile.txt
   --Quickstart: Compose and Rails
     https://docs.docker.com/compose/rails/
 
+Gemfile.lock.txt
+  "Create an empty Gemfile.lock to build our Dockerfile."[1]
+
+  touch Gemfile.lock
+
+  --Quickstart: Compose and Rails
+    https://docs.docker.com/compose/rails/
+
 Gemfile.txt
   "Create a bootstrap Gemfile which just loads Rails.
   It’ll be overwritten in a moment by rails new."   
