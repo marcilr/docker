@@ -6,6 +6,14 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 Filelist
 ========
 4-files-required.txt
-  Notes on 4 files required to build the application
+  Four files needed for rails application:
+  1. Dockerfile - Define exactly what needs to be included in Docker container.
+  2. Gemfile - just loads Rails
+  3. Gemfile.lock - to build our Dockerfile
+  4. docker-compose.yml - is where the magic happens.  This file describes the
+     services that comprise your app (a database and a web app), how to get
+     each one's Docker image (the database just runs on a pre-made PostgreSQL
+     image, and the web app is built from the current directory), and the
+     configuration needed to link them together and expose the web app's port.
   --Quickstart: Compose and Rails
-    https://docs.docker.com/compose/rails/
+    http://localhost/dev/docker-rails/index.html
