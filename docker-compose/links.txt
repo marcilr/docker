@@ -8,6 +8,33 @@ docker-compose related links
 
 Links
 =====
+Where to go next
+----------------
+User guide
+https://docs.docker.com/compose/
+
+Getting Started
+https://docs.docker.com/compose/gettingstarted/
+
+Get started with Django
+https://docs.docker.com/compose/django/
+
+Get started with Rails
+https://docs.docker.com/compose/rails/
+
+Get started with WordPress
+https://docs.docker.com/compose/wordpress/
+
+Command line reference
+https://docs.docker.com/compose/reference/
+
+Compose file reference
+https://docs.docker.com/compose/compose-file/
+
+--Install Docker Compose
+  https://docs.docker.com/compose/install/
+---------------------------------------------
+
 Docker Compose
 Compose is a tool for defining and running
 multi-container Docker applications.
