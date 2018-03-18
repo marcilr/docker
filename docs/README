@@ -1,0 +1,11 @@
+README
+Created Sun Mar 18 13:41:01 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+4-files-required.txt
+  Notes on 4 files required to build the application
+  --Quickstart: Compose and Rails
+    https://docs.docker.com/compose/rails/
