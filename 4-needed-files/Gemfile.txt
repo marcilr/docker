@@ -1,0 +1,16 @@
+Gemfile.txt
+Created Sun Mar 18 14:06:10 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+"Create a bootstrap Gemfile which just loads Rails.
+It’ll be overwritten in a moment by rails new."[1]
+
+source 'https://rubygems.org'
+gem 'rails', '5.0.0.1'
+
+
+Links
+=====
+[1] Quickstart: Compose and Rails
+    https://docs.docker.com/compose/rails/
