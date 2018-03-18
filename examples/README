@@ -5,5 +5,14 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+checker/
+  It’s only purpose is that it will check if a gem name is
+  available on RubyGems or not. If it’s available, it will
+  return true; otherwise, false.
+  --Build a Minimal Docker Container for Ruby Apps
+    Last updated: 2018-02-27
+    by Ilija Eftimov
+    https://blog.codeship.com/build-minimal-docker-container-ruby-apps/
+
 examples.txt
   Examples
