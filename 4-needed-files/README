@@ -17,3 +17,9 @@ Filelist
      configuration needed to link them together and expose the web app's port.
   --Quickstart: Compose and Rails
     http://localhost/dev/docker-rails/index.html
+
+Dockerfile.txt
+  The Dockerfile defines "exactly what needs to be included in the container."   
+  --Quickstart: Compose and Rails
+    https://docs.docker.com/compose/rails/
+
