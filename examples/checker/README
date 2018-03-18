@@ -1,0 +1,15 @@
+README
+Created Sun Mar 18 15:12:45 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+checker.rb
+  It’s only purpose is that it will check if a gem name is
+  available on RubyGems or not. If it’s available, it will
+  return true; otherwise, false.
+  --Build a Minimal Docker Container for Ruby Apps
+    Last updated: 2018-02-27
+    by Ilija Eftimov
+    https://blog.codeship.com/build-minimal-docker-container-ruby-apps/
