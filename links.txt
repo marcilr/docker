@@ -17,7 +17,6 @@ https://docs.docker.com/engine/reference/commandline/build/
 
 Configure and troubleshoot the Docker daemon
 https://docs.docker.com/config/daemon/
-
 	
 What is Docker and When to Use It
 Lucas Carlson
@@ -111,6 +110,12 @@ https://docs.docker.com/install/
 Securing Docker with TLS certificates
 January 3, 2016
 http://tech.paulcz.net/2016/01/secure-docker-with-tls/
+
+The Docker Store
+Find Trusted and Enterprise Ready Containers, Plugins, and Docker Editions
+Links to docker for Mac, AWS, Fedora, CentOS, Windows, Azure,
+Ubuntu, and Debian.
+https://store.docker.com/search?type=edition&offering=community
 
 WORKDIR
 Dockerfile reference          <===
