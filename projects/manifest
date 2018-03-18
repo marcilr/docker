@@ -1,0 +1,30 @@
+# manifest
+# Created Sun Mar 18 13:46:26 AKDT 2018
+# Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+#
+# Manifest for resync application
+#
+# To my knowledge GitHub does not support hierarchical repositories outside
+# of perhaps git submodules.  However, submodules are not so good so I've
+# implemented hierarchical repositories using repo names and this manifest.
+#
+# The dashes in the repo names represent directory separation.  There are
+# some repos like svn-to-git/ that have acutally dashes in the repo name.
+# Have not escaped these dashes in any way.   Might do this at some point.
+#
+
+# =====================================================================
+# =====================================================================
+#
+# Public GitHub repositories
+#
+# =====================================================================
+# =====================================================================
+
+
+# =====================================================================
+#
+# Virtualization
+#
+# =====================================================================
+ssh://git@source.gci.com/nit/psap   psap-ORIG
