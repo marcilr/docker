@@ -23,6 +23,21 @@ Installation
 1. Install docker:           debian/00INSTALL/INSTALL
 2. Install docker compose:   docker-compose/00INSTALL/INSTALL 
 
+3. Install python-docker package:
+   # aptitude install python-docker
+   The following NEW packages will be installed:
+   python-backports.ssl-match-hostname{a} python-docker python-openssl{a} 
+   python-requests{a} python-urllib3{a} python-websocket{a} 
+   0 packages upgraded, 6 newly installed, 0 to remove and 3 not upgraded.
+   Need to get 0 B/291 kB of archives. After unpacking 1,401 kB will be used.
+   Do you want to continue? [Y/n/?] Y
+   ...
+   #
+
+4. Install python-dockerpty package:
+   # aptitude install python-dockerpty
+
+
 
 Sun Mar 18 14:46:51 AKDT 2018
 =============================
