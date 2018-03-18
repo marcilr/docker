@@ -27,4 +27,5 @@
 # Virtualization
 #
 # =====================================================================
-ssh://git@source.gci.com/nit/psap   psap-ORIG
+ssh://htpc/data/git/gci/projects/psap   psap
+ssh://git@source.gci.com/nit/psap       psap-ORIG
