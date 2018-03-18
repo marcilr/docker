@@ -1,0 +1,16 @@
+links.txt
+Created Sun Mar 18 13:56:44 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Ruby on Rails related links
+
+
+Links
+=====
+Dockerizing a Ruby on Rails Application
+https://semaphoreci.com/community/tutorials/dockerizing-a-ruby-on-rails-application
+
+Quickstart: Compose and Rails
+https://docs.docker.com/compose/rails/
+
