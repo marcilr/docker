@@ -18,6 +18,17 @@ Filelist
   --Quickstart: Compose and Rails
     http://localhost/dev/docker-rails/index.html
 
+docker-compose.yml.txt
+  "Finally, docker-compose.yml is where the magic happens.
+  This file describes the services that comprise your app
+  (a database and a web app), how to get each one’s Docker
+  image (the database just runs on a pre-made PostgreSQL
+  image, and the web app is built from the current
+  directory), and the configuration needed to link them
+  together and expose the web app’s port."
+  --Quickstart: Compose and Rails
+    https://docs.docker.com/compose/rails/
+
 Dockerfile.txt
   The Dockerfile defines "exactly what needs to be included in the container."   
   --Quickstart: Compose and Rails
