@@ -24,6 +24,9 @@ o Automated Deployment
   product goes to market faster.
 https://circleci.com/product/
 
+Language Guide: Ruby
+https://circleci.com/docs/2.0/language-ruby/
+
 Pre-Built CircleCI Docker Images
 Reference > Pre-Built CircleCI Docker Images
 Usage: Add the following under docker: in your config.yml:
