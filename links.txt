@@ -45,6 +45,9 @@ https://larry-price.com/blog/2015/02/26/a-quick-guide-to-using-docker-compose-pr
 Amazon Web Services setup guide
 https://docs.docker.com/docker-cloud/cloud-swarm/link-aws-swarm/
 
+Best practices for writing Dockerfiles
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+
 Build the project
 docker-compose run web rails new . --force --database=postgresql
 https://docs.docker.com/compose/rails/#define-the-project
