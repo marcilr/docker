@@ -20,7 +20,7 @@ Gotchas-in-Writing-Dockerfile.pdf (460K)
 links.txt
   Dockerfile related links
 
-syntax.txt
+syntax/
   Syntax for Docker file
 
 
