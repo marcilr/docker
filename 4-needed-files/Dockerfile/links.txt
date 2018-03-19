@@ -7,7 +7,13 @@ Dockerfile related links
 
 
 Links
-=====  
+=====
+Best practices for writing Dockerfiles
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+
+Dockerfile reference
+https://docs.docker.com/engine/reference/builder/
+
 Gotchas in Writing Dockerfile
 o Why do we need to use Dockerfile?
 o ADD and understanding context in Dockerfile
