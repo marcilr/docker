@@ -25,6 +25,7 @@ o Automated Deployment
 https://circleci.com/product/
 
 Language Guide: Ruby
+Has circleci/ruby:2.4-node reference
 https://circleci.com/docs/2.0/language-ruby/
 
 Pre-Built CircleCI Docker Images
