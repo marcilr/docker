@@ -1,0 +1,18 @@
+FROM circleci/ruby:2.4-node
+
+VOLUME ["/opt/psap"]
+
+ENV BUNDLE_PATH=/opt/bundle \
+    BUNDLE_BIN=/opt/bundle/bin \
+    GEM_HOME=/opt/bundle
+ENV PATH="${BUNDLE_BIN}:${PATH}"
+
+COPY . /opt/psap
+WORKDIR /opt/psap
+
+COPY ./docker/scripts/entrypoint.sh /
+USER root
+RUN chmod +x /entrypoint.sh
+
+USER circleci
+ENTRYPOINT /entrypoint.sh
