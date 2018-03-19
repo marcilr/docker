@@ -1,0 +1,32 @@
+cheat-sheet.txt
+Created Mon Mar 19 15:49:17 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Recap and cheat sheet
+## List Docker CLI commands
+docker
+docker container --help
+
+## Display Docker version and info
+docker --version
+docker version
+docker info
+
+## Excecute Docker image
+docker run hello-world
+
+## List Docker images
+docker image ls
+
+## List Docker containers (running, all, all in quiet mode)
+docker container ls
+docker container ls --all
+docker container ls -aq
+--docs.docker.com/get-started/
+
+Links
+=====
+Recap and cheat sheet
+Get Started, Part 1: Orientation and setup
+https://docs.docker.com/get-started/#recap-and-cheat-sheet
