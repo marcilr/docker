@@ -8,7 +8,6 @@ Example related links
 
 Links
 =====
-
 How CircleCI Works
 Automate your pipeline from commit to deploy
 o VCS Integration
