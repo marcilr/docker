@@ -5,6 +5,15 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+build.txt
+  The docker build command builds an image from a Dockerfile and
+  a context.  The build’s context is the set of files at a specified
+  location PATH or URL.  The PATH is a directory on your local
+  filesystem. The URL is a Git repository location.
+  --Usage
+    Dockerfile reference 
+    https://docs.docker.com/engine/reference/builder/#usage
+
 debian-use-of-docker.txt
   Debian use of docker
 
