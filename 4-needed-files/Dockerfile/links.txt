@@ -1,0 +1,16 @@
+links.txt
+Created Mon Mar 19 11:04:46 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Dockerfile related links
+
+
+Links
+=====  
+Gotchas in Writing Dockerfile
+o Why do we need to use Dockerfile?
+o ADD and understanding context in Dockerfile
+o Treat your container like a binary with CMD
+o Difference between CMD and ENTRYPOINT
+http://kimh.github.io/blog/en/docker/gotchas-in-writing-dockerfile-en/
