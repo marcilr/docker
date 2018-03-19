@@ -40,8 +40,10 @@ VOLUME ["/opt/psap"]
     update an image.
 
   o Data volumes persist even if the container itself is
-    deleted. 
+    deleted.
 
+  --Understanding “VOLUME” instruction in DockerFile
+    https://stackoverflow.com/questions/41935435/understanding-volume-instruction-in-dockerfile
 
 Links
 =====
