@@ -1,0 +1,11 @@
+glossary.txt
+Created Mon Mar 19 12:42:37 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Glossary for Dockerfile
+
+
+base image - An image the has no parent is a base image.
+             -- Glossary terms
+                https://docs.docker.com/glossary/
