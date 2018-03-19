@@ -8,6 +8,15 @@ Example related links
 
 Links
 =====
+Best practices for writing Dockerfiles
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+
+Dockerfile reference
+https://docs.docker.com/engine/reference/builder/
+
+Get Started, Part 1: Orientation and setup
+https://docs.docker.com/get-started/
+
 How CircleCI Works
 Automate your pipeline from commit to deploy
 o VCS Integration
