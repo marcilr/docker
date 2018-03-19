@@ -1,0 +1,22 @@
+README
+Created Mon Mar 19 10:54:58 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Untarred docker-17.12.1-ce.tgz
+Renamed from docker/ to docker-17.12.1-ce/
+
+
+Filelist
+========
+docker
+  A self-sufficient runtime for containers
+
+docker-containerd
+docker-containerd-ctr
+docker-containerd-shim
+dockerd
+docker-init
+docker-proxy
+docker-runc
+README
