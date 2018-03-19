@@ -23,3 +23,9 @@ o Automated Deployment
   Passing builds are deployed to various environments so your
   product goes to market faster.
 https://circleci.com/product/
+
+Pre-Built CircleCI Docker Images
+Reference > Pre-Built CircleCI Docker Images
+Usage: Add the following under docker: in your config.yml:
+- image: circleci/ruby:[TAG]
+https://circleci.com/docs/2.0/circleci-images/#ruby
