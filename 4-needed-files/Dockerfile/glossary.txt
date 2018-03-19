@@ -7,5 +7,10 @@ Glossary for Dockerfile
 
 
 base image - An image the has no parent is a base image.
-             -- Glossary terms
-                https://docs.docker.com/glossary/
+
+
+Links
+=====
+[1] Glossary terms
+    https://docs.docker.com/glossary/
+
