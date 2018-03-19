@@ -90,6 +90,9 @@ https://docs.docker.com/engine/installation/linux/ubuntu/
 Docker for Mac
 https://www.docker.com/docker-mac
 
+Docker glossary
+https://docs.docker.com/glossary/
+
 Documentation
 https://docs.docker.com/
 
