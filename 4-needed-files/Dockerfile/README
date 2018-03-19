@@ -12,6 +12,9 @@ Dockerfile.txt
 examples/
   Examples
 
+glossary.txt
+  Glossary for Dockerfile
+
 Gotchas-in-Writing-Dockerfile.pdf (460K)
   by Kim Hirokuni
   pages: 11
