@@ -9,6 +9,11 @@ Dockerfile.txt
   The Dockerfile is used for "automation
   of Docker image creation."[1]
 
+Gotchas-in-Writing-Dockerfile.pdf (460K)
+  by Kim Hirokuni
+  pages: 11
+  http://kimh.github.io/blog/en/docker/gotchas-in-writing-dockerfile-en/#exec_format_error
+
 links.txt
   Dockerfile related links
 
