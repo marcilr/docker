@@ -1,0 +1,26 @@
+links.txt
+Created Mon Mar 19 14:56:47 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Example related links
+
+
+Links
+=====
+
+How CircleCI Works
+Automate your pipeline from commit to deploy
+o VCS Integration
+  CircleCI integrates with GitHub, GitHub Enterprise, and Bitbucket.
+  Every time you commit code, CircleCI creates a build.
+o Automated Testing
+  CircleCI automatically tests your build in a clean container or
+  virtual machine.
+o Notifications
+  Your team is notified if a build fails so issues can be fixed
+  quickly.
+o Automated Deployment
+  Passing builds are deployed to various environments so your
+  product goes to market faster.
+https://circleci.com/product/
