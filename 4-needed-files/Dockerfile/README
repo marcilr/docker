@@ -1,0 +1,20 @@
+README
+Created Mon Mar 19 11:06:26 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+Dockerfile.txt
+  The Dockerfile is used for "automation
+  of Docker image creation."[1]
+
+links.txt
+  Dockerfile related links
+
+
+Links
+=====
+[1] Gotchas in Writing Dockerfile
+http://kimh.github.io/blog/en/docker/gotchas-in-writing-dockerfile-en/
+
