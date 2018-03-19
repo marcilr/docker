@@ -1,0 +1,7 @@
+syntax.txt
+Created Mon Mar 19 12:18:38 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Syntax for Dockerfile
+
