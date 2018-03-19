@@ -33,3 +33,8 @@ Reference > Pre-Built CircleCI Docker Images
 Usage: Add the following under docker: in your config.yml:
 - image: circleci/ruby:[TAG]
 https://circleci.com/docs/2.0/circleci-images/#ruby
+
+Rails on Docker
+Josh Clayton  February 19, 2015 UPDATED ON March 30, 2016
+https://robots.thoughtbot.com/rails-on-docker
+
