@@ -14,6 +14,13 @@ https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 Dockerfile reference
 https://docs.docker.com/engine/reference/builder/
 
+Get Started, Part 1: Orientation and setup
+Recap and cheat sheet
+https://docs.docker.com/get-started/#recap-and-cheat-sheet
+
+Get Started, Part 2: Containers
+https://docs.docker.com/get-started/part2/
+
 Glossary terms
 https://docs.docker.com/glossary/
 
