@@ -9,6 +9,7 @@ Analysis
 
 Dockerfile-psap
 ===============
+Inspection of Dockerfile lines
 
 FROM circleci/ruby:2.4-node
   An image’s parent image is the image designated in the
@@ -45,6 +46,11 @@ VOLUME ["/opt/psap"]
   --Understanding “VOLUME” instruction in DockerFile
     https://stackoverflow.com/questions/41935435/understanding-volume-instruction-in-dockerfile
 
+ENV BUNDLE_PATH=/opt/bundle \
+    BUNDLE_BIN=/opt/bundle/bin \
+    GEM_HOME=/opt/bundle
+
+
 Links
 =====
 How CircleCI Works
@@ -62,4 +68,8 @@ o Automated Deployment
   Passing builds are deployed to various environments so your
   product goes to market faster.
 https://circleci.com/product/
+
+Rails on Docker
+Josh Clayton  February 19, 2015 UPDATED ON March 30, 2016
+https://robots.thoughtbot.com/rails-on-docker
 
