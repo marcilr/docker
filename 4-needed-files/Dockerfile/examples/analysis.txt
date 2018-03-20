@@ -46,6 +46,19 @@ VOLUME ["/opt/psap"]
   --Understanding “VOLUME” instruction in DockerFile
     https://stackoverflow.com/questions/41935435/understanding-volume-instruction-in-dockerfile
 
+#
+# The ENV instruction sets the environment variable
+# <key> to the value <value>. This value will be in
+# the environment of all “descendant” Dockerfile
+# commands and can be replaced inline in many as well.
+# ...
+# The second form, ENV <key>=<value> ..., allows for
+# multiple variables to be set at one time.  Notice
+# that the second form uses the equals sign (=) in the 
+# syntax, while the first form does not.  Like command
+# line parsing, quotes and backslashes can be used to 
+# include spaces within values.[1]
+#
 ENV BUNDLE_PATH=/opt/bundle \
     BUNDLE_BIN=/opt/bundle/bin \
     GEM_HOME=/opt/bundle
