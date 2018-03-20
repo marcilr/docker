@@ -1,0 +1,12 @@
+VOLUME.txt
+Created Tue Mar 20 09:39:29 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+VOLUME instruction
+
+
+Links
+=====
+Understanding “VOLUME” instruction in DockerFile
+https://stackoverflow.com/questions/41935435/understanding-volume-instruction-in-dockerfile
