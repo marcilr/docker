@@ -11,6 +11,9 @@ Links
 Best practices for writing Dockerfiles
 https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 
+Create a base image
+https://docs.docker.com/develop/develop-images/baseimages/
+
 Dockerfile reference                                <===
 https://docs.docker.com/engine/reference/builder/
 
