@@ -11,7 +11,7 @@ Links
 Best practices for writing Dockerfiles
 https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 
-Dockerfile reference
+Dockerfile reference                                <===
 https://docs.docker.com/engine/reference/builder/
 
 Get Started, Part 1: Orientation and setup
@@ -60,3 +60,6 @@ o Automated Deployment
   Passing builds are deployed to various environments so your
   product goes to market faster.
 https://circleci.com/product/
+
+In a Dockerfile, How to update PATH environment variable?
+https://stackoverflow.com/questions/27093612/in-a-dockerfile-how-to-update-path-environment-variable
