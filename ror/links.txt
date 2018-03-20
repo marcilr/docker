@@ -25,6 +25,10 @@ http://blog.kontena.io/dockerizing-ruby-application/
 Quickstart: Compose and Rails
 https://docs.docker.com/compose/rails/
 
+Rails on Docker
+Josh Clayton  February 19, 2015 UPDATED ON March 30, 2016
+https://robots.thoughtbot.com/rails-on-docker
+
 Ruby on Rails
 http://rubyonrails.org/
 
