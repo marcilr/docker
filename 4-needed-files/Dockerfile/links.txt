@@ -19,6 +19,20 @@ Recap and cheat sheet
 https://docs.docker.com/get-started/#recap-and-cheat-sheet
 
 Get Started, Part 2: Containers
+o # Use an official Python runtime as a parent image
+  FROM python:2.7-slim
+o # Set the working directory to /app
+  WORKDIR /app
+o # Copy the current directory contents into the container at /app
+  ADD . /app
+o # Install any needed packages specified in requirements.txt
+  RUN pip install --trusted-host pypi.python.org -r requirements.txt
+o # Make port 80 available to the world outside this container
+  EXPOSE 80
+o # Define environment variable
+  ENV NAME World
+o # Run app.py when the container launches
+  CMD ["python", "app.py"]
 https://docs.docker.com/get-started/part2/
 
 Glossary terms
