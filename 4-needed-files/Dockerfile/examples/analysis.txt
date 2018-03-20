@@ -50,9 +50,35 @@ ENV BUNDLE_PATH=/opt/bundle \
     BUNDLE_BIN=/opt/bundle/bin \
     GEM_HOME=/opt/bundle
 
+ENV PATH="${BUNDLE_BIN}:${PATH}"
+
+# Copy all files in psap/ directory to contains /opt/psap/
+COPY . /opt/psap
+
+# Set the working directory to /opt/psap
+WORKDIR /opt/psap
+
+#
+# Copy entrypoint.sh into container at /
+#
+COPY ./docker/scripts/entrypoint.sh /
+
+USER root
+
+# Set executable on entrypoint.sh script
+RUN chmod +x /entrypoint.sh
+
+USER circleci
+
+ENTRYPOINT /entrypoint.sh
+
 
 Links
 =====
+Get Started, Part 2: Containers
+Pulled some good syntax from here
+https://docs.docker.com/get-started/part2/
+
 How CircleCI Works
 Automate your pipeline from commit to deploy
 o VCS Integration
@@ -72,4 +98,3 @@ https://circleci.com/product/
 Rails on Docker
 Josh Clayton  February 19, 2015 UPDATED ON March 30, 2016
 https://robots.thoughtbot.com/rails-on-docker
-
