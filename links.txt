@@ -113,6 +113,9 @@ https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7b
 Install Docker
 https://docs.docker.com/install/
 
+Language Guide: Ruby                           <===
+https://circleci.com/docs/2.0/language-ruby/
+
 Securing Docker with TLS certificates
 January 3, 2016
 http://tech.paulcz.net/2016/01/secure-docker-with-tls/
