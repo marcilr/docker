@@ -63,18 +63,52 @@ WORKDIR /opt/psap
 #
 COPY ./docker/scripts/entrypoint.sh /
 
+#
+# The USER instruction sets the user name (or UID)
+# and optionally the user group (or GID) to use
+# when running the image and for any RUN, CMD and
+# ENTRYPOINT instructions that follow it in the
+# Dockerfile.[1]
+#
 USER root
 
+#
 # Set executable on entrypoint.sh script
+# Executed as root
+#
 RUN chmod +x /entrypoint.sh
 
+#
+# The USER instruction sets the user name (or UID)
+# and optionally the user group (or GID) to use
+# when running the image and for any RUN, CMD and
+# ENTRYPOINT instructions that follow it in the
+# Dockerfile.[1]
+#
 USER circleci
 
+#
+# The shell form prevents any CMD or run command
+# line arguments from being used, but has the
+# disadvantage that your ENTRYPOINT will be started
+# as a subcommand of /bin/sh -c, which does not
+# pass signals. This means that the executable
+# will not be the container’s PID 1 - and will
+# not receive Unix signals - so your executable
+# will not receive a SIGTERM from docker stop
+# <container>.
+#
+# Only the last ENTRYPOINT instruction in the
+# Dockerfile will have an effect.[1]
+#
 ENTRYPOINT /entrypoint.sh
 
 
 Links
 =====
+[1] Dockerfile reference
+https://docs.docker.com/engine/reference/builder/#usage
+
 Get Started, Part 2: Containers
 Pulled some good syntax from here
 https://docs.docker.com/get-started/part2/
