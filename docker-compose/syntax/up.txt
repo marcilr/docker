@@ -9,7 +9,17 @@ Compose will start and run your entire app.
 --docs.docker.com/compose/overview
 
 
+docker-compose up -d
+
+That's it! Check the running app web interface: http://localhost:3000
+--github.com/vovimayhem/docker-compose-rails-dev-example
+
+
+
 Links
 =====
+A Docker compose project example I use to develop rails apps with Docker
+https://github.com/vovimayhem/docker-compose-rails-dev-example
+
 Overview of Docker Compose
 https://docs.docker.com/compose/overview/
