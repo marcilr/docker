@@ -5,6 +5,12 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+down.txt
+  docker-compose down
+  To stop application
+  --Quickstart: Compose and Rails
+    https://docs.docker.com/compose/rails/
+
 syntax.txt
   Syntax for docker
 
