@@ -28,6 +28,17 @@ Command    Description
 docker	   The base command for the Docker CLI
 
 
+Extended description
+====================
+The main process inside the container will receive SIGTERM,
+and after a grace period, SIGKILL.
+
+
+Examples
+========
+$ docker stop my_container
+
+
 Links
 =====
 docker stop
