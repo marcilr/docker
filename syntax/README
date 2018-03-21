@@ -17,6 +17,11 @@ build.txt
 debian-use-of-docker.txt
   Debian use of docker
 
+docker.txt
+  docker
+  The base command for the Docker CLI 
+  https://docs.docker.com/engine/reference/commandline/docker/
+
 run.txt
   Execute on MacBook Pro under ~/projects/psap/:
   $ docker-compose run web rails new . --force --skip-active-record
