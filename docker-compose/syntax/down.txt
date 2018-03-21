@@ -1,0 +1,24 @@
+down.txt
+Created Wed Mar 21 13:43:51 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+docker-compose down
+
+
+Stop the application
+
+
+
+To stop the application, run docker-compose down in your
+project directory.  You can use the same terminal window
+in which you started the database, or another one where
+you have access to a command prompt. This is a clean way
+to stop the application.
+--docs.docker.com/compose/rails/
+
+
+Links
+=====
+Quickstart: Compose and Rails
+https://docs.docker.com/compose/rails/
