@@ -59,6 +59,9 @@ http://bradgessler.com/articles/docker-bundler/
 Overview of Docker Compose
 https://docs.docker.com/compose/overview/
 
+Quickstart: Compose and Rails
+https://docs.docker.com/compose/rails/
+
 The Docker for DevOps course: From development to production
 Updated for Docker v17.06. Learn how to build and deploy web
 applications with Docker in an automated way.
