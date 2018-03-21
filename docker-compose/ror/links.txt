@@ -1,0 +1,17 @@
+links.txt
+Created Wed Mar 21 11:10:52 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Docker with ruby on rails related links
+
+
+Links
+=====
+A Docker compose project example I use to develop rails apps with Docker
+https://github.com/vovimayhem/docker-compose-rails-dev-example
+
+Quickstart: Compose and Rails
+This Quickstart guide shows you how to use Docker Compose
+to set up and run a Rails/PostgreSQL app. 
+https://docs.docker.com/compose/rails/
