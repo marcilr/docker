@@ -8,6 +8,7 @@ docker-compose related links
 
 Links
 =====
+
 Where to go next
 ----------------
 User guide
@@ -59,7 +60,7 @@ http://bradgessler.com/articles/docker-bundler/
 Overview of Docker Compose
 https://docs.docker.com/compose/overview/
 
-Quickstart: Compose and Rails
+Quickstart: Compose and Rails          <===
 https://docs.docker.com/compose/rails/
 
 The Docker for DevOps course: From development to production
