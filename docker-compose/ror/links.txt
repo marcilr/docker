@@ -15,3 +15,11 @@ Quickstart: Compose and Rails
 This Quickstart guide shows you how to use Docker Compose
 to set up and run a Rails/PostgreSQL app. 
 https://docs.docker.com/compose/rails/
+
+Using Docker Compose for Ruby Development
+Last updated: 2017-08-01
+by Kelly Andrews
+To provide an example of how you might move to containerized development,
+I built a simple todo API with Ruby on Rails and PostgreSQL using Docker
+Compose for development, testing, and eventually in my CI/CD pipeline
+https://blog.codeship.com/using-docker-compose-for-ruby-development/
