@@ -1,0 +1,11 @@
+conf.txt
+Created Wed Mar 21 15:15:31 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Configuration for docker
+
+
+$ docker --version
+Docker version 17.12.1-ce, build 7390fc6
+$
