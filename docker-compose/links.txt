@@ -63,6 +63,7 @@ The Docker for DevOps course: From development to production
 Updated for Docker v17.06. Learn how to build and deploy web
 applications with Docker in an automated way.
 Created by Nick Janetakis, Last updated 1/2018
+NOTE: This is a $20 course
 https://www.udemy.com/the-docker-for-devops-course-from-development-to-production/?couponCode=CODESHIP_20
 
 Using Docker Compose for Ruby Development
