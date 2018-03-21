@@ -35,6 +35,11 @@ https://docs.docker.com/compose/compose-file/
   https://docs.docker.com/compose/install/
 ---------------------------------------------
 
+Alpine Based Docker Images Make a Difference in Real World Apps
+Last updated: 2017-05-05	
+by Nick Janetakis
+https://blog.codeship.com/alpine-based-docker-images-make-difference-real-world-apps/
+
 Docker Compose
 Compose is a tool for defining and running
 multi-container Docker applications.
@@ -52,3 +57,9 @@ http://bradgessler.com/articles/docker-bundler/
 
 Overview of Docker Compose
 https://docs.docker.com/compose/overview/
+
+Using Docker Compose for Ruby Development
+Last updated: 2017-08-01
+by Kelly Andrews
+https://blog.codeship.com/using-docker-compose-for-ruby-development/
+
