@@ -1,0 +1,35 @@
+stop.txt
+Created Wed Mar 21 10:18:47 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Stop one or more running containers
+
+
+Usage
+=====
+docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+
+Options
+=======
+
+Name, shorthand   Default   Description
+----------------------------------------------------------------------
+--time , -t       10        Seconds to wait for stop before killing it
+
+
+Parent command
+==============
+
+
+Command    Description
+----------------------------------------------
+docker	   The base command for the Docker CLI
+
+
+Links
+=====
+docker stop
+Stop one or more running containers
+https://docs.docker.com/engine/reference/commandline/stop/
