@@ -1,0 +1,14 @@
+ror.txt
+Created Wed Mar 21 11:02:36 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Ruby on Rails
+
+
+Links
+=====
+Quickstart: Compose and Rails
+Has use of docker-compose to create rails
+application on localhost port 3000
+https://docs.docker.com/compose/rails/
