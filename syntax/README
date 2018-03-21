@@ -23,7 +23,13 @@ run.txt
 
 start.txt
   Start one or more stopped containers
+  docker start [OPTIONS] CONTAINER [CONTAINER...]
   https://docs.docker.com/engine/reference/commandline/start/#options
+
+stop.txt
+  Stop one or more running containers
+  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+  https://docs.docker.com/engine/reference/commandline/stop/
 
 syntax.txt
   Syntax
