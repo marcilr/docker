@@ -38,6 +38,7 @@ https://docs.docker.com/compose/compose-file/
 Alpine Based Docker Images Make a Difference in Real World Apps
 Last updated: 2017-05-05	
 by Nick Janetakis
+Uses python:2.7-alpine container
 https://blog.codeship.com/alpine-based-docker-images-make-difference-real-world-apps/
 
 Docker Compose
@@ -58,8 +59,13 @@ http://bradgessler.com/articles/docker-bundler/
 Overview of Docker Compose
 https://docs.docker.com/compose/overview/
 
+The Docker for DevOps course: From development to production
+Updated for Docker v17.06. Learn how to build and deploy web
+applications with Docker in an automated way.
+Created by Nick Janetakis, Last updated 1/2018
+https://www.udemy.com/the-docker-for-devops-course-from-development-to-production/?couponCode=CODESHIP_20
+
 Using Docker Compose for Ruby Development
 Last updated: 2017-08-01
 by Kelly Andrews
 https://blog.codeship.com/using-docker-compose-for-ruby-development/
-
