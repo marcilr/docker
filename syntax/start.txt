@@ -6,6 +6,11 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 Start one or more stopped containers
 
 
+Usage
+=====
+docker start [OPTIONS] CONTAINER [CONTAINER...]
+
+
 Options
 =======
 
@@ -24,9 +29,18 @@ Name, shorthand       Description
 --interactive, -i     Attach container’s STDIN
 
 
+Parent command
+==============
+
+Command    Description
+----------------------------------------------
+docker     The base command for the Docker CLI
+
+
 Examples
 ========
 $ docker start my_container
+
 
 Links
 =====
