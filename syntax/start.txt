@@ -1,0 +1,35 @@
+start.txt
+Created Wed Mar 21 10:12:30 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Start one or more stopped containers
+
+
+Options
+=======
+
+Name, shorthand       Description
+-------------------------------------------------------------------------
+--attach , -a         Attach STDOUT/STDERR and forward signals
+
+--checkpoint          experimental (daemon)
+                      Restore from this checkpoint
+
+--checkpoint-dir      experimental (daemon)
+                      Use a custom checkpoint storage directory
+
+--detach-keys         Override the key sequence for detaching a container
+
+--interactive, -i     Attach container’s STDIN
+
+
+Examples
+========
+$ docker start my_container
+
+Links
+=====
+docker start
+Start one or more stopped containers
+https://docs.docker.com/engine/reference/commandline/start/
