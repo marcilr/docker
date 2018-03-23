@@ -1,0 +1,18 @@
+README
+Created Fri Mar 23 11:11:40 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+blog/
+  Example blog application create with:[1]
+  $ rails new blog
+
+
+
+Links
+=====
+[1] Getting Started with Rails
+This guide covers getting up and running with Ruby on Rails.
+http://guides.rubyonrails.org/getting_started.html
