@@ -9,6 +9,9 @@ aws/
   Amazon Web Services
   https://docs.docker.com/docker-cloud/cloud-swarm/link-aws-swarm/
 
+debian.txt
+  Docker for Debian
+
 cloud/
   Use the Docker Cloud Agent to Bring your Own Host
   https://docs.docker.com/docker-cloud/infrastructure/byoh/
