@@ -10,3 +10,10 @@ links.txt
 
 ror.txt
   Ruby on Rails
+
+version.txt
+  Ruby on rails version
+
+  $ rails --version
+  Rails 5.1.4
+  $
