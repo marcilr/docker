@@ -61,11 +61,18 @@ https://docs.docker.com/config/daemon/
 Configure Docker to start on boot
 https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot
 
+Control Docker with systemd
+https://docs.docker.com/config/daemon/systemd/
+
 Docker - Build, Ship, and Run Any App, Anywhere
 https://www.docker.com/
 
 Docker Community Edition (CE)
 https://www.docker.com/community-edition/
+
+Docker Community Edition for Debian
+The best way to run Docker on Debian
+https://store.docker.com/editions/community/docker-ce-server-debian
 
 Docker Containers
 https://www.docker.com/what-container
@@ -82,6 +89,9 @@ https://www.docker.com/community-edition#/download
 Docker Enterprise Edition (EE)
 https://www.docker.com/enterprise-edition/
 
+Docker for Debian
+https://www.docker.com/docker-debian
+
 Docker for Linux
 Install Docker on a computer which already
 has a Linux distribution installed.
@@ -95,6 +105,13 @@ https://docs.docker.com/glossary/
 
 Documentation
 https://docs.docker.com/
+
+Download from Docker Store
+https://www.docker.com/docker-debian
+===> https://store.docker.com/editions/community/docker-ce-server-debian
+
+Get Docker CE for Debian
+https://docs.docker.com/install/linux/docker-ce/debian/
 
 Getting started with Docker
 https://docs.docker.com/get-started/
@@ -110,6 +127,12 @@ bundle check || bundle install
 bundle exec rails s -b 0.0.0.0
 https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800
 
+How to install Docker engine on Debian 9 Stretch Linux
+https://linuxconfig.org/how-to-install-docker-engine-on-debian-9-stretch-linux
+
+How to Install Docker on Debain 9 Stretch <=== This still generates tls error
+https://www.itzgeek.com/how-tos/linux/debian/how-to-install-docker-on-debian-9.html
+
 Install Docker
 https://docs.docker.com/install/
 
@@ -119,6 +142,10 @@ https://circleci.com/docs/2.0/language-ruby/
 Securing Docker with TLS certificates
 January 3, 2016
 http://tech.paulcz.net/2016/01/secure-docker-with-tls/
+
+Setup Instructions
+Docker Community Edition for Debian
+https://store.docker.com/editions/community/docker-ce-server-debian/plans/docker-ce-server-debian-tier?tab=instructions
 
 The Docker Store
 Find Trusted and Enterprise Ready Containers, Plugins, and Docker Editions
