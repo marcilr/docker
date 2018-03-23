@@ -32,6 +32,7 @@ rails new blog --skip-spring --skip-listen.
 
 You can see all of the command line options that the Rails application
 builder accepts by running rails new -h.
+--guides.rubyonrails.org/getting_started.html
 
 
 Links
