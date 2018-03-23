@@ -4,9 +4,18 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 
 Test creation of blog application using rails generator
-script.[1]
+script:[1]
 
 This installed all the required dependencies:
+
+$ ls blog
+app        db            log           README.md
+bin        Gemfile       package.json  test
+config     Gemfile.lock  public        tmp
+config.ru  lib           Rakefile      vendor
+$
+
+
 
 $ rails new blog
       create  
