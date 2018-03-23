@@ -8,6 +8,9 @@ Filelist
 00INSTALL/
   Installation of ruby on rails
 
+examples/
+  Examples
+
 links.txt
   Ruby on Rails related links
 
