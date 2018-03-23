@@ -1,0 +1,11 @@
+version.txt
+Created Fri Mar 23 10:40:46 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Ruby on rails version
+
+
+$ rails --version
+Rails 5.1.4
+$
