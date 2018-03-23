@@ -9,6 +9,12 @@ blog/
   Example blog application create with:[1]
   $ rails new blog
 
+blog-build.txt
+  Test creation of blog application using rails generator
+  script.[1]
+    
+  This installed all the required dependencies:
+  $ rails new blog
 
 
 Links
