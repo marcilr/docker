@@ -14,14 +14,6 @@ Filelist
 debian.txt
   Docker for Debian
 
-debs/
-  Debain Docker CE debs
-  NOTE: Could not get these to work properly (March 16, 2018)
-
-docker-17.12.1-ce/
-  Untarred docker-17.12.1-ce.tgz
-  Renamed from docker/ to docker-17.12.1-ce/
-
 links.txt
   Debian installation of docker related links
   
