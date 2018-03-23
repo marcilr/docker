@@ -1,0 +1,17 @@
+README
+Created Fri Mar 23 10:36:32 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+hellow-world.rb
+  Class based hello world rather than just:
+    puts "Hello World"
+
+  $ ./hellow-world.rb 
+  Hello World!
+  $
+
+  --How do I create a ruby Hello world?
+  https://stackoverflow.com/questions/705729/how-do-i-create-a-ruby-hello-world
