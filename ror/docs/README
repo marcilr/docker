@@ -6,5 +6,9 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 Filelist
 ========
 generators.txt
+  Generators
   Ruby scripts called generators to facilitate building applications
+  --Getting Started with Rails
+    This guide covers getting up and running with Ruby on Rails.
+    http://guides.rubyonrails.org/getting_started.html
 
