@@ -10,6 +10,23 @@ Command line options[1]
 $ rails new -h
 
 
+Installation of Rails
+=====================
+1. To install Rails, use the gem install command provided by RubyGems:[1]
+$ gem install rails
+
+$ type rails
+rails is hashed (/usr/local/bin/rails)
+$
+
+$ rails --version
+Rails 5.1.4
+$
+
+Looks good!
+
+
+
 Links
 =====
 [1] Getting Started with Rails
