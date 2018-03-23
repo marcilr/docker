@@ -9,6 +9,16 @@ Installation of Ruby on Rails
 1. To install Rails, use the gem install command provided by RubyGems:[1]
 $ gem install rails
 
+$ type rails
+rails is hashed (/usr/local/bin/rails)
+$
+
+$ rails --version
+Rails 5.1.4
+$
+
+Looks good!
+
 
 Links
 =====
