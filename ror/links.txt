@@ -22,6 +22,9 @@ Dockerizing Ruby Application
 Fair amount of detail on ruby base images
 http://blog.kontena.io/dockerizing-ruby-application/
 
+Getting Started with Rails
+http://guides.rubyonrails.org/getting_started.html#hello-rails-bang
+
 Quickstart: Compose and Rails
 https://docs.docker.com/compose/rails/
 
