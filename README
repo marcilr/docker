@@ -11,6 +11,11 @@ Filelist
 4-needed-files/
   4 needed files
 
+bin/
+  docker-17.12.1-ce/ ===> bin/
+  Untarred docker-17.12.1-ce.tgz
+  Renamed from docker/ to docker-17.12.1-ce/
+
 debian/
   Debian installation of docker
 
