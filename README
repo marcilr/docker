@@ -45,6 +45,8 @@ projects/
 ror/
   Ruby on Rails
 
+src/
+  Source code
+
 syntax/
   Syntax
-
