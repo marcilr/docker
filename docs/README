@@ -13,3 +13,6 @@ cloud/
   Use the Docker Cloud Agent to Bring your Own Host
   https://docs.docker.com/docker-cloud/infrastructure/byoh/
 
+github/
+  Docker resources on GitHub
+
