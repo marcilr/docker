@@ -5,3 +5,13 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 Installation of Ruby on Rails
 
+
+1. To install Rails, use the gem install command provided by RubyGems:[1]
+$ gem install rails
+
+
+Links
+=====
+[1] Getting Started with Rails
+This guide covers getting up and running with Ruby on Rails.
+http://guides.rubyonrails.org/getting_started.html
