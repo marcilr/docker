@@ -11,6 +11,8 @@ Rails 5.1.4
 $
 
 
+Ruby
+====
 $ ruby -v
 ruby 2.3.3p222 (2016-11-21) [x86_64-linux-gnu]
 $
@@ -38,3 +40,18 @@ ii  ruby2.3                2.3.3-1+deb9u2   amd64   Interpreter of object-orient
 ii  ruby2.3-dev:amd64      2.3.3-1+deb9u2   amd64   Header files for compiling extension modules for the Ruby 2.3
 ii  rubygems-integration   1.11             all     integration of Debian Ruby packages with Rubygems
 $
+
+
+SQLite3
+=======
+$ sqlite3 --version
+3.16.2 2017-01-06 16:32:41 a65a62893ca8319e89e48b8a38cf8a59c69a8209
+$ 
+
+
+
+
+Links
+=====
+SQLite3
+https://www.sqlite.org/
