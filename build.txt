@@ -1,0 +1,224 @@
+build.txt
+Created Wed Mar 21 14:18:21 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Build the project
+
+1. List 4 inital files:
+  $ ls -1 container/
+  docker-compose.yml
+  Dockerfile
+  Gemfile
+  Gemfile.lock
+  README
+  $
+
+NOTE: README is only a filelist of the 4 needed files
+
+
+With those four files in place" (under container/), you can
+now generate the Rails skeleton app using docker-compose run:
+
+  $ cd container 
+  $ docker-compose run web rails new . --force --database=postgresql
+
+  WARNING: Dependency conflict: an older version of the 'docker-py'
+  package may be polluting the namespace. If you're experiencing crashes,
+  run the following command to remedy the issue:
+    pip uninstall docker-py; pip uninstall docker; pip install docker
+
+  ERROR: Couldn't connect to Docker daemon at http+docker://localunixsocket -
+  is it running?
+
+  If it's at a non-standard location, specify the URL with the DOCKER_HOST
+  environment variable.
+  $
+
+
+  Update 'docker-py' per above advise:
+  $ pip uninstall docker-py; pip uninstall docker; pip install docker
+
+  Collecting docker
+    Downloading docker-3.1.4-py2.py3-none-any.whl (121kB)
+      100% |...| 122kB 1.2MB/s 
+  Collecting backports.ssl-match-hostname>=3.5; python_version < \
+    "3.5" (from docker)
+    Downloading backports.ssl_match_hostname-3.5.0.1.tar.gz
+  Collecting six>=1.4.0 (from docker)
+    Downloading six-1.11.0-py2.py3-none-any.whl
+  Collecting websocket-client>=0.32.0 (from docker)
+    Downloading websocket_client-0.47.0-py2.py3-none-any.whl (200kB)
+      100% |...| 204kB 1.8MB/s 
+  Collecting requests!=2.18.0,>=2.14.2 (from docker)
+    Downloading requests-2.18.4-py2.py3-none-any.whl (88kB)
+      100% |...| 92kB 2.3MB/s 
+  Collecting ipaddress>=1.0.16; python_version < "3.3" (from docker)
+    Downloading ipaddress-1.0.19.tar.gz
+  Collecting docker-pycreds>=0.2.2 (from docker)
+    Downloading docker_pycreds-0.2.2-py2.py3-none-any.whl
+  Collecting urllib3<1.23,>=1.21.1 (from requests!=2.18.0,>=2.14.2->docker)
+    Downloading urllib3-1.22-py2.py3-none-any.whl (132kB)
+      100% |...| 133kB 1.9MB/s 
+  Collecting idna<2.7,>=2.5 (from requests!=2.18.0,>=2.14.2->docker)
+    Downloading idna-2.6-py2.py3-none-any.whl (56kB)
+      100% |...| 61kB 2.7MB/s 
+  Collecting chardet<3.1.0,>=3.0.2 (from requests!=2.18.0,>=2.14.2->docker)
+    Downloading chardet-3.0.4-py2.py3-none-any.whl (133kB)
+      100% |...| 143kB 2.4MB/s 
+  Collecting certifi>=2017.4.17 (from requests!=2.18.0,>=2.14.2->docker)
+    Downloading certifi-2018.1.18-py2.py3-none-any.whl (151kB)
+      100% |...| 153kB 2.5MB/s 
+  Building wheels for collected packages: backports.ssl-match-hostname, \
+    ipaddress
+    Running setup.py bdist_wheel for backports.ssl-match-hostname ... done
+    Stored in directory: /home/marcilr/.cache/pip/wheels/5d/72/\
+    36/b2a31507b613967b728edc33378a5ff2ada0f62855b93c5ae1
+  Running setup.py bdist_wheel for ipaddress ... done
+    Stored in directory: /home/marcilr/.cache/pip/wheels/d7/6b/\
+    69/666188e8101897abb2e115d408d139a372bdf6bfa7abb5aef5
+  Successfully built backports.ssl-match-hostname ipaddress
+  Installing collected packages: backports.ssl-match-hostname, six, \
+  websocket-client, urllib3, idna, chardet, certifi, requests, ipaddress, \
+  docker-pycreds, docker
+  Successfully installed backports.ssl-match-hostname-3.5.0.1 \
+  certifi-2018.1.18 chardet-3.0.4 docker-3.1.4 docker-pycreds-0.2.2 \
+  idna-2.6 ipaddress-1.0.19 requests-2.18.4 six-1.11.0 urllib3-1.22 \
+  websocket-client-0.47.0
+  $
+
+  Generate the Rails skeleton app using docker-compose run:
+  $ cd container
+  $ docker-compose run web rails new . --force --database=postgresql
+  WARNING: Dependency conflict: an older version of the 'docker-py' \
+  package may be polluting the namespace.  If you're experiencing crashes, \
+  run the following command to remedy the issue:
+  pip uninstall docker-py; pip uninstall docker; pip install docker
+  ERROR: Couldn't connect to Docker daemon at http+docker://localunixsocket - \
+  is it running?
+
+  If it's at a non-standard location, specify the URL with the DOCKER_HOST \
+  environment variable.
+  $
+
+  reinstalled docker-py per above instructions:
+  $ pip uninstall docker-py; pip uninstall docker; pip install docker
+  Not uninstalling docker-py at /usr/lib/python2.7/dist-packages, outside environment /usr
+  Uninstalling docker-3.1.4:
+    /home/marcilr/.local/lib/python2.7/site-packages/docker-3.1.4.dist-info/DESCRIPTION.rst
+    /home/marcilr/.local/lib/python2.7/site-packages/docker-3.1.4.dist-info/INSTALLER
+    /home/marcilr/.local/lib/python2.7/site-packages/docker-3.1.4.dist-info/METADATA
+    /home/marcilr/.local/lib/python2.7/site-packages/docker-3.1.4.dist-info/RECORD
+    /home/marcilr/.local/lib/python2.7/site-packages/docker-3.1.4.dist-info/WHEEL
+    /home/marcilr/.local/lib/python2.7/site-packages/docker-3.1.4.dist-info/metadata.json
+    /home/marcilr/.local/lib/python2.7/site-packages/docker-3.1.4.dist-info/top_level.txt
+    /home/marcilr/.local/lib/python2.7/site-packages/docker/__init__.py
+    /home/marcilr/.local/lib/python2.7/site-packages/docker/__init__.pyc
+    /home/marcilr/.local/lib/python2.7/site-packages/docker/api/__init__.py
+    ...
+    /home/marcilr/.local/lib/python2.7/site-packages/docker/utils/utils.py
+    /home/marcilr/.local/lib/python2.7/site-packages/docker/utils/utils.pyc
+    /home/marcilr/.local/lib/python2.7/site-packages/docker/version.py
+    /home/marcilr/.local/lib/python2.7/site-packages/docker/version.pyc
+  Proceed (y/n)? y
+  Successfully uninstalled docker-3.1.4
+  Collecting docker
+    Using cached docker-3.1.4-py2.py3-none-any.whl
+  Collecting backports.ssl-match-hostname>=3.5; python_version < "3.5" (from docker)
+  Collecting six>=1.4.0 (from docker)
+    Using cached six-1.11.0-py2.py3-none-any.whl
+  Collecting websocket-client>=0.32.0 (from docker)
+    Using cached websocket_client-0.47.0-py2.py3-none-any.whl
+  Collecting requests!=2.18.0,>=2.14.2 (from docker)
+    Using cached requests-2.18.4-py2.py3-none-any.whl
+  Collecting ipaddress>=1.0.16; python_version < "3.3" (from docker)
+  Collecting docker-pycreds>=0.2.2 (from docker)
+    Using cached docker_pycreds-0.2.2-py2.py3-none-any.whl
+  Collecting urllib3<1.23,>=1.21.1 (from requests!=2.18.0,>=2.14.2->docker)
+    Using cached urllib3-1.22-py2.py3-none-any.whl
+  Collecting idna<2.7,>=2.5 (from requests!=2.18.0,>=2.14.2->docker)
+    Using cached idna-2.6-py2.py3-none-any.whl
+  Collecting chardet<3.1.0,>=3.0.2 (from requests!=2.18.0,>=2.14.2->docker)
+    Using cached chardet-3.0.4-py2.py3-none-any.whl
+  Collecting certifi>=2017.4.17 (from requests!=2.18.0,>=2.14.2->docker)
+    Using cached certifi-2018.1.18-py2.py3-none-any.whl
+  Installing collected packages: backports.ssl-match-hostname, six, websocket-client, urllib3, idna, chardet, certifi, requests, ipaddress, docker-pycreds, docker
+  Successfully installed backports.ssl-match-hostname-3.5.0.1 certifi-2018.1.18 chardet-3.0.4 docker-3.1.4 docker-pycreds-0.2.2 idna-2.6 ipaddress-1.0.19 requests-2.18.4 six-1.11.0 urllib3-1.22 websocket-client-0.47.0
+  $
+
+  Generate the Rails skeleton app using docker-compose run:
+  $ cd container
+  $ docker-compose run web rails new . --force --database=postgresql
+  WARNING: Dependency conflict: an older version of the 'docker-py' \
+  package may be polluting the namespace. If you're experiencing crashes, \
+  run the following command to remedy the issue:
+  pip uninstall docker-py; pip uninstall docker; pip install docker
+  ERROR: Couldn't connect to Docker daemon at http+docker://localunixsocket - \
+  is it running?
+
+  If it's at a non-standard location, specify the URL with the DOCKER_HOST \
+  environment variable.
+  $
+
+  Updated /etc/daemon.json
+
+  {
+    "debug": true,
+    "tls": false,
+    "hosts": ["tcp://127.0.0.1:2376"]
+  }
+
+    to
+
+  {
+    "debug": true,
+    "tls": false,
+    "hosts": ["tcp://127.0.0.1:3000"]
+  }
+
+  Appears to start with:
+  # export PATH=/usr/local/docker:${PATH}
+  # /usr/local/dockerd
+  ...
+  INFO[2018-03-21T15:59:17.449367750-08:00] API listen on 127.0.0.1:3000
+
+
+
+  Investigating starting docker:
+
+  Start docker:
+  $ /usr/local/docker/docker start
+  "docker start" requires at least 1 argument.
+  See 'docker start --help'.
+
+  Usage:  docker start [OPTIONS] CONTAINER [CONTAINER...] [flags]
+
+  Start one or more stopped containers
+  $
+
+
+  
+
+
+First, Compose builds the image for the web service using the
+Dockerfile.  Then it runs rails new inside a new container,
+using that image. Once it’s done, you should have generated a
+fresh app.
+
+List the files.
+
+$ ls -l
+total 64
+-rw-r--r--   1 vmb  staff   222 Jun  7 12:05 Dockerfile
+-rw-r--r--   1 vmb  staff  1738 Jun  7 12:09 Gemfile
+-rw-r--r--   1 vmb  staff  4297 Jun  7 12:09 Gemfile.lock
+-rw-r--r--   1 vmb  staff   374 Jun  7 12:09 README.md
+-rw-r--r--   1 vmb  staff   227 Jun  7 12:09 Rakefile
+drwxr-xr-x  10 vmb  staff   340 Jun  7 12:09 app
+drwxr-xr-x   8 vmb  staff   272 Jun  7 12:09 bin
+drwxr-xr-x  14 vmb  staff   476 Jun  7 12:09 config
+-rw-r--r--   1 vmb  staff   130 Jun  7 12:09 config.ru
+drwxr-xr-x   3 vmb  staff   102 Jun  7 12:09 db
+-rw-r--r--   1 vmb  staff   211 Jun  7 12:06 docker-compose.yml
+drwxr-xr-x   4 vmb  staff   136 Jun  7 12:09 lib
+
