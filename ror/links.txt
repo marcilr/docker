@@ -25,6 +25,9 @@ http://blog.kontena.io/dockerizing-ruby-application/
 Getting Started with Rails
 http://guides.rubyonrails.org/getting_started.html#hello-rails-bang
 
+Producing and Consuming XML over HTTP with Rails
+https://pragmaticstudio.com/blog/2005/7/12/producing-and-consuming-xml-over-http-with-rails
+
 Quickstart: Compose and Rails
 https://docs.docker.com/compose/rails/
 
@@ -34,4 +37,3 @@ https://robots.thoughtbot.com/rails-on-docker
 
 Ruby on Rails
 http://rubyonrails.org/
-
