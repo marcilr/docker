@@ -98,3 +98,9 @@ $ nano app/views/welcome/index.html.erb
 crtrl-x
 $
 
+
+Links
+=====
+[1] Getting Started with Rails
+This guide covers getting up and running with Ruby on Rails.
+http://guides.rubyonrails.org/getting_started.html
