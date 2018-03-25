@@ -1,4 +1,4 @@
-blog-build.txt
+00-blog-build.txt
 Created Fri Mar 23 11:14:20 AKDT 2018
 Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
