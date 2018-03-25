@@ -1,0 +1,100 @@
+02-controller-and-view.txt
+Created Sun Mar 25 12:28:59 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Controller and View
+
+
+4.2 Say "Hello", Rails[1]
+
+To get Rails saying "Hello", you need to create at minimum
+a controller and a view.
+
+A controller's purpose is to receive specific requests for
+the application. Routing decides which controller receives
+which requests.  Often, there is more than one route to
+each controller, and different routes can be served by
+different actions. Each action's purpose is to collect
+information to provide it to a view.
+
+A view's purpose is to display this information in a human
+readable format.  An important distinction to make is that
+it is the controller, not the view, where information is
+collected. The view should just display that information.
+By default, view templates are written in a language called
+eRuby (Embedded Ruby) which is processed by the request
+cycle in Rails before being sent to the user.
+
+To create a new controller, you will need to run the
+"controller" generator and tell it you want a controller
+called "Welcome" with an action called "index", just like
+this:
+
+  $ bin/rails generate controller Welcome index          <===
+  Rails will create several files and a route for you.
+
+  create  app/controllers/welcome_controller.rb
+   route  get 'welcome/index'
+  invoke  erb
+  create    app/views/welcome
+  create    app/views/welcome/index.html.erb
+  invoke  test_unit
+  create    test/controllers/welcome_controller_test.rb
+  invoke  helper
+  create    app/helpers/welcome_helper.rb
+  invoke    test_unit
+  invoke  assets
+  invoke    coffee
+  create      app/assets/javascripts/welcome.coffee
+  invoke    scss
+  create      app/assets/stylesheets/welcome.scss
+
+Most important of these are of course the controller,
+located at app/controllers/welcome_controller.rb and the
+view, located at app/views/welcome/index.html.erb.
+
+Open the app/views/welcome/index.html.erb file in your   <===
+text editor. Delete all of the existing code in the
+file, and replace it with the following single line
+of code:
+
+<h1>Hello, Rails!</h1>
+
+
+Executing the above:
+$ cd blog/
+$ rails generate controller Welcome index 
+Running via Spring preloader in process 2866
+      create  app/controllers/welcome_controller.rb
+       route  get 'welcome/index'
+      invoke  erb
+      create    app/views/welcome
+      create    app/views/welcome/index.html.erb
+      invoke  test_unit
+      create    test/controllers/welcome_controller_test.rb
+      invoke  helper
+      create    app/helpers/welcome_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/welcome.coffee
+      invoke    scss
+      create      app/assets/stylesheets/welcome.scss
+$ 
+
+Edit app/views/welcome/index.html.erb file.
+Delete all of the existing code in the file,
+and replace it with the following single line
+of code:
+
+  <h1>Hello, Rails!</h1>
+
+$ nano app/views/welcome/index.html.erb
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+  Updated to:
+<h1>Hello, Rails!</h1>
+crtrl-x
+$
+
