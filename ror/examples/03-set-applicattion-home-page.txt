@@ -53,7 +53,7 @@ route is indeed going to WelcomeController's index action
 and is rendering the view correctly.
 
 For more information about routing, refer to Rails Routing
-from the Outside In.
+from the Outside In.[2]
 
 
 Executed:
@@ -104,4 +104,8 @@ Links
 [1] Getting Started with Rails
 This guide covers getting up and running with Ruby on Rails.
 http://guides.rubyonrails.org/getting_started.html
+
+[2] Rails Routing from the Outside In
+http://guides.rubyonrails.org/routing.html
+
 
