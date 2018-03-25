@@ -9,7 +9,7 @@ blog/
   Example blog application create with:[1]
   $ rails new blog
 
-03-set-applicattion-home-page.txt
+03-set-application-home-page.txt
   Set Application Home Page
 
 02-controller-and-view.txt
