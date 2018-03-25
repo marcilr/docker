@@ -9,13 +9,25 @@ blog/
   Example blog application create with:[1]
   $ rails new blog
 
-blog-build.txt
+03-set-applicattion-home-page.txt
+  Set Application Home Page
+
+02-controller-and-view.txt
+  Controller and View
+
+01-blog-start.txt
+  Start the blog web server
+
+00-blog-build.txt
   Test creation of blog application using rails generator
   script.[1]
     
   This installed all the required dependencies:
   $ rails new blog
 
+  --Getting Started with Rails
+    This guide covers getting up and running with Ruby on Rails.
+    http://guides.rubyonrails.org/getting_started.html
 
 Links
 =====
