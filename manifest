@@ -19,4 +19,5 @@
 # Public GitHub repositories
 #
 # =====================================================================
-ssh://git@github.com/marcilr/rails   rails
+ssh://git@github.com/marcilr/docker-container   container
+ssh://git@github.com/marcilr/rails              rails
