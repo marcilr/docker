@@ -42,7 +42,7 @@ packages.txt
 projects/
   Projects for docker
 
-ror/
+rails/
   Ruby on Rails
 
 src/
