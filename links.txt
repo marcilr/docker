@@ -103,6 +103,14 @@ https://www.docker.com/docker-mac
 Docker glossary
 https://docs.docker.com/glossary/
 
+Dockerizing Ruby Application
+08 June 2016
+Fair amount of detail on ruby base images
+http://blog.kontena.io/dockerizing-ruby-application/
+
+Dockerizing a Ruby on Rails Application
+https://semaphoreci.com/community/tutorials/dockerizing-a-ruby-on-rails-application
+
 Documentation
 https://docs.docker.com/
 
