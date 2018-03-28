@@ -1,0 +1,12 @@
+links.txt
+Created Wed Mar 28 10:15:35 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Dockerfile related links
+
+
+Links
+=====
+Best practices for writing Dockerfiles
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
