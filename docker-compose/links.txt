@@ -8,11 +8,25 @@ docker-compose related links
 
 Links
 =====
+Alpine Based Docker Images Make a Difference in Real World Apps
+Last updated: 2017-05-05	
+by Nick Janetakis
+Uses python:2.7-alpine container
+https://blog.codeship.com/alpine-based-docker-images-make-difference-real-world-apps/
 
-Where to go next
-----------------
-User guide
+Command line reference
+https://docs.docker.com/compose/reference/
+
+Compose file reference
+https://docs.docker.com/compose/compose-file/
+
+Docker Compose
+Compose is a tool for defining and running
+multi-container Docker applications.
 https://docs.docker.com/compose/
+
+Features (the list of features)
+https://docs.docker.com/compose/overview/#features
 
 Getting Started
 https://docs.docker.com/compose/gettingstarted/
@@ -25,30 +39,6 @@ https://docs.docker.com/compose/rails/
 
 Get started with WordPress
 https://docs.docker.com/compose/wordpress/
-
-Command line reference
-https://docs.docker.com/compose/reference/
-
-Compose file reference
-https://docs.docker.com/compose/compose-file/
-
---Install Docker Compose
-  https://docs.docker.com/compose/install/
----------------------------------------------
-
-Alpine Based Docker Images Make a Difference in Real World Apps
-Last updated: 2017-05-05	
-by Nick Janetakis
-Uses python:2.7-alpine container
-https://blog.codeship.com/alpine-based-docker-images-make-difference-real-world-apps/
-
-Docker Compose
-Compose is a tool for defining and running
-multi-container Docker applications.
-https://docs.docker.com/compose/
-
-Features (the list of features)
-https://docs.docker.com/compose/overview/#features
 
 Install Docker Compose
 You can run Compose on macOS, Windows, and 64-bit Linux.
@@ -69,6 +59,9 @@ applications with Docker in an automated way.
 Created by Nick Janetakis, Last updated 1/2018
 NOTE: This is a $20 course
 https://www.udemy.com/the-docker-for-devops-course-from-development-to-production/?couponCode=CODESHIP_20
+
+User guide
+https://docs.docker.com/compose/
 
 Using Docker Compose for Ruby Development
 Last updated: 2017-08-01
