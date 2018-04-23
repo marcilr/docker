@@ -13,6 +13,12 @@ center VMs, or the cloud.
 
 --docker.com/
 
+Docker provides this same capability without the overhead of a
+virtual machine.  It lets you put your environment and configuration
+into code and deploy it.  The same Docker configuration can also be
+used in a variety of environments.  This decouples infrastructure
+requirements from the application environment.
+--airpair.com/
 
 Using docker for use with Comtech API at GCI NIT
 (Network Integration Team) circa Spring 2018.
@@ -42,6 +48,7 @@ Installation
 Sun Mar 18 14:46:51 AKDT 2018
 =============================
 Installed docker and docker compose.
+
 
 Fri Jan 26 08:34:18 AKST 2018
 =============================
@@ -98,6 +105,9 @@ https://www.docker.com/community-edition/
 
 [2] Docker Enterprise Edition
 https://www.docker.com/enterprise-edition/
+
+8 Proven Real-World Ways to Use Docker
+https://www.airpair.com/docker/posts/8-proven-real-world-ways-to-use-docker
 
 Docker
 https://www.docker.com/
