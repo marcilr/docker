@@ -15,6 +15,13 @@ docker
   NOTE: For /etc/init.d/docker status to work
 
   # service docker start
+
+  $ /etc/init.d/docker status
+    docker.service - LSB: Music Player Daemon
+     Loaded: loaded (/etc/init.d/docker; generated; vendor preset: enabled)
+     Active: active (exited) since Mon 2018-04-23 10:05:25 AKDT; 15min ago
+       Docs: man:systemd-sysv-generator(8)
+  $ 
   
   https://gist.github.com/onjin/5982766#file-docker
   https://gist.githubusercontent.com/onjin/5982766/raw/6d67cf7b8bb062ea67f47333eff86b090eef3793/docker
