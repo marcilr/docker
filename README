@@ -33,6 +33,9 @@ github/
 glossary.txt
   Glossary
 
+init.d/
+  docker start/stop script
+
 links.txt
   Docker related links
 
