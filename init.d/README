@@ -6,7 +6,9 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 Filelist
 ========
 docker
-  Docker start script to install under /etc/init.d/docker
+  /etc/init.d/docker file for debian
+
+  Install with:
   # cp docker /etc/init.d/
   # chmod 755 /etc/init.d/docker 
   # update-rc.d docker defaults
