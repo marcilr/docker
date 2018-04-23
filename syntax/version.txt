@@ -5,4 +5,10 @@ Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
 
 Version of Docker:
+
 $ docker --version
+Docker version 17.12.1-ce, build 7390fc6
+$
+
+--On covellite April 23, 2018
+
