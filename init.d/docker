@@ -15,10 +15,11 @@
 
 . /lib/lsb/init-functions
 
-PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/docker
 NAME=docker
 DESC="docker daemon"
-DAEMON=/usr/bin/docker
+#DAEMON=/usr/bin/docker
+DAEMON=/usr/local/docker/docker
 PIDFILE=/var/run/docker.pid
 DOCKER_OPTS="-d=true"
 
