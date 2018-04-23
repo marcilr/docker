@@ -1,0 +1,16 @@
+README
+Created Mon Apr 23 10:00:49 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+docker
+  Docker start script to install under /etc/init.d/docker
+  # cp docker /etc/init.d/
+  # chmod 755 /etc/init.d/docker 
+  # update-rc.d docker defaults
+  # service docker start
+  
+  https://gist.github.com/onjin/5982766#file-docker
+  https://gist.githubusercontent.com/onjin/5982766/raw/6d67cf7b8bb062ea67f47333eff86b090eef3793/docker
