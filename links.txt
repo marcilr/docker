@@ -95,6 +95,9 @@ https://www.docker.com/docker-debian
 Get Docker CE for Debian
 https://docs.docker.com/install/linux/docker-ce/debian/
 
+Get Started, Part 1: Orientation and setup <===
+https://docs.docker.com/get-started/
+
 Getting started with Docker
 https://docs.docker.com/get-started/
 
@@ -111,6 +114,9 @@ bundle install; also brings up the Rails app:
 bundle check || bundle install
 bundle exec rails s -b 0.0.0.0
 https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800
+
+How to detect a docker daemon port
+https://stackoverflow.com/questions/26561963/how-to-detect-a-docker-daemon-port
 
 How to install Docker engine on Debian 9 Stretch Linux
 https://linuxconfig.org/how-to-install-docker-engine-on-debian-9-stretch-linux
