@@ -6,36 +6,6 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 Docker related links
 
 
-<=== Hanh Thu Dec 14, 2017
-
-Get started with Docker Compose
-https://docs.docker.com/compose/gettingstarted/
-
-docker build
-Build an image from a Dockerfile
-https://docs.docker.com/engine/reference/commandline/build/
-
-Configure and troubleshoot the Docker daemon
-https://docs.docker.com/config/daemon/
-	
-What is Docker and When to Use It
-Lucas Carlson
-APRIL 22, 2014
-o How Docker Is Like Java
-  Java's promise: Write Once. Run Anywhere.
-Some very good details here
-https://www.ctl.io/developers/blog/post/what-is-docker-and-when-to-use-it/
-
-Post-installation steps for Linux
-Configure Docker to start on boot
-https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user
-
-Securing Docker with TLS certificates
-January 3, 2016   
-http://tech.paulcz.net/2016/01/secure-docker-with-tls/
-
-
-
 Links
 =====
 A Quick Guide to Using Docker-compose (Previously Fig)
@@ -66,6 +36,10 @@ https://docs.docker.com/config/daemon/systemd/
 
 Docker - Build, Ship, and Run Any App, Anywhere
 https://www.docker.com/
+
+docker build
+Build an image from a Dockerfile
+https://docs.docker.com/engine/reference/commandline/build/
 
 Docker Community Edition (CE)
 https://www.docker.com/community-edition/
@@ -124,6 +98,9 @@ https://docs.docker.com/install/linux/docker-ce/debian/
 Getting started with Docker
 https://docs.docker.com/get-started/
 
+Get started with Docker Compose
+https://docs.docker.com/compose/gettingstarted/
+
 How to cache bundle install with Docker <===
 Also the start command for the app container lives at
 /script/start, it is a very simple bash script that first
@@ -147,6 +124,10 @@ https://docs.docker.com/install/
 Language Guide: Ruby                           <===
 https://circleci.com/docs/2.0/language-ruby/
 
+Post-installation steps for Linux
+Configure Docker to start on boot
+https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user
+
 Securing Docker with TLS certificates
 January 3, 2016
 http://tech.paulcz.net/2016/01/secure-docker-with-tls/
@@ -160,6 +141,14 @@ Find Trusted and Enterprise Ready Containers, Plugins, and Docker Editions
 Links to docker for Mac, AWS, Fedora, CentOS, Windows, Azure,
 Ubuntu, and Debian.
 https://store.docker.com/search?type=edition&offering=community
+
+What is Docker and When to Use It
+Lucas Carlson
+APRIL 22, 2014
+o How Docker Is Like Java
+  Java's promise: Write Once. Run Anywhere.
+Some very good details here
+https://www.ctl.io/developers/blog/post/what-is-docker-and-when-to-use-it/
 
 WORKDIR
 Dockerfile reference          <===
