@@ -22,6 +22,14 @@ docker.txt
   The base command for the Docker CLI 
   https://docs.docker.com/engine/reference/commandline/docker/
 
+dockerd.txt
+  dockerd daemon
+
+  dockerd is the persistent process that manages containers.  Docker
+  uses different binaries for the daemon and client.  To run the
+  daemon you type dockerd.
+  https://docs.docker.com/engine/reference/commandline/dockerd/
+
 run.txt
   Execute on MacBook Pro under ~/projects/psap/:
   $ docker-compose run web rails new . --force --skip-active-record
