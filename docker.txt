@@ -10,8 +10,12 @@ Docker - Build, Ship, and Run Any App, Anywhere
 Docker is an open platform for developers and sysadmins to build,
 ship, and run distributed applications, whether on laptops, data
 center VMs, or the cloud.
-
 --docker.com/
+
+Docker is hotter than hot because it makes it possible to get far
+more apps running on the same old servers and it also makes it
+very easy to package and ship programs.
+--zdnet.com/
 
 Docker provides this same capability without the overhead of a
 virtual machine.  It lets you put your environment and configuration
@@ -114,3 +118,7 @@ https://www.docker.com/
 
 Install Docker
 https://docs.docker.com/engine/installation/
+
+What is Docker and why is it so darn popular?
+https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/
+
