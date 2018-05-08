@@ -15,6 +15,11 @@ center VMs, or the cloud.
 Docker is hotter than hot because it makes it possible to get far
 more apps running on the same old servers and it also makes it
 very easy to package and ship programs.
+...
+Solomon Hykes helped found a business, Docker, which sought to
+make containers easy to use. With the release of Docker 1.0 in
+June 2014, the buzz became a roar.  And, over the years, it's
+only got louder.
 --zdnet.com/
 
 Docker provides this same capability without the overhead of a
@@ -120,5 +125,6 @@ Install Docker
 https://docs.docker.com/engine/installation/
 
 What is Docker and why is it so darn popular?
+by Steven J. Vaughan-Nichols for Linux and Open Source
+March 21, 2018 -- 12:50 GMT (05:50 PDT) 
 https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/
-
