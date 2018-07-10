@@ -31,7 +31,7 @@ $
 # mv docker /usr/local/docker-docker-17.12.1-ce
 # ln -s /usr/local/docker-docker-17.12.1-ce/ /usr/local/docker
 
-$ Add docker to PATH in user's ~/.bashrc:
+Add docker to PATH in user's ~/.bashrc:
 $ nano +156 ~/.bashrc
 PATH=/home/marcilr/bin:${GOROOT}/bin:${PATH}
   to
